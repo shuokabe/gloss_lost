@@ -61,11 +61,14 @@ def majority_labelling(train, test, label_type='base'):
     # Create the majority dictionary from the train dataset
     maj_dict = create_majority_dict(train, label)
     # Label the test dataset
-    split_file = utils.text_to_line(test)
+    split_file = utils.text_to_line(test, empty=False)
+    #print(split_file)
     new_file_list = []
+    count_sent = 0
     for line in split_file:
         if line == '': # Blank line
             new_file_list.append(line)
+            count_sent += 1
         else:
             split_line = re.split(' ', line)
             utils.check_equality(len(split_line), label.label_position) #4) #2)
@@ -74,4 +77,5 @@ def majority_labelling(train, test, label_type='base'):
                 new_file_list.append(f'{line}\t{maj_dict[source_morph]}')
             else: # Unknown morpheme
                 new_file_list.append(f'{line}\t?') #UNKNOWN
+    print(f'There are {count_sent + 1} sentences')
     return '\n'.join(new_file_list)

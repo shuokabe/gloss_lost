@@ -203,7 +203,7 @@ ARGS+=" --mdl-compact"
 
 #ARGS+=" --mdl-save-otf tmp/model-%02d.wgh"
 #ARGS+=" --mdl-save-otf tsez_exp/dev_model_pos/model-pos-%02d.wgh"
-ARGS+=" --mdl-save-otf ../IGT_ST/dev_model/model-${lang}_IGT_${suffix}-%02d.wgh"
+#ARGS+=" --mdl-save-otf ../IGT_ST/dev_model/model-${lang}_IGT_${suffix}-%02d.wgh"
 
 # L'optimisation est faite avec r-prop avec un nombre fixe d'itérations qu'il
 # faut spécifier.  Il est possible aussi d'ajuster les différent paramètres de

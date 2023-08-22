@@ -10,7 +10,8 @@ LABEL_POSITION = 3
 
 # Evaluation of the output of Lost
 def extract_labels(ref_file, lost_file, label_type='base', source=False,
-                   control=True):
+                   control=True, wapiti_field_n=REF_LABEL_POSITION,
+                   wapiti_label_length=4, include_position=False):
     '''Extract the reference and predicted labels.
 
     The reference is a Wapiti format file, while the prediction is a lost file.
@@ -18,6 +19,7 @@ def extract_labels(ref_file, lost_file, label_type='base', source=False,
     each sentence is a list in the output.
     source: boolean parameter to include the source morpheme in the output or not.
     control: check the unit size
+    include_position: get the label position from the prediction
     '''
     label = LabelHandler(label_type)
     print(f'Using a {label_type} label ({label.unit_length} units)')
@@ -30,35 +32,45 @@ def extract_labels(ref_file, lost_file, label_type='base', source=False,
 
     label_list = []
     for i in range(n): # Iterate through all sentences
+        #print(i)
         ref_sentence = utils.text_to_line(split_ref[i])
         pred_sentence = utils.line_to_word(split_pred[i][:-1])
         # -1 because there is a final whitespace in the output
         #print(i)
         m = len(ref_sentence)
+        if m != len(pred_sentence): print(ref_sentence, pred_sentence)
         utils.check_equality(m, len(pred_sentence))
 
         sentence_label_list = []
         for j in range(m): # Iterate through all morphemes
             ref_unit = utils.line_to_word(ref_sentence[j])
             pred_unit = re.split('[|@]', pred_sentence[j])
-            utils.check_equality(len(ref_unit), 4) #5)
+            #print(len(ref_unit))
+            utils.check_equality(len(ref_unit), wapiti_label_length) #5)
             if control: utils.check_equality(len(pred_unit), label.unit_length) #5)
             utils.check_equality(ref_unit[0], pred_unit[0])
             #else:
                 #sentence_label_list.append((ref_unit[4], pred_unit[4]))
             if source: # Include source morpheme in output
-                sentence_label_list.append((ref_unit[0],
-                ref_unit[REF_LABEL_POSITION], pred_unit[label.label_position]))
+                if include_position:
+                    sentence_label_list.append((ref_unit[0],
+                    ref_unit[wapiti_field_n], pred_unit[label.label_position],
+                    pred_unit[-1]))
+                else:
+                    sentence_label_list.append((ref_unit[0],
+                    ref_unit[wapiti_field_n], pred_unit[label.label_position]))
             else: # Keep the labels only
                 sentence_label_list.append(
-                (ref_unit[REF_LABEL_POSITION], pred_unit[label.label_position]))
+                (ref_unit[wapiti_field_n], pred_unit[label.label_position]))
         label_list.append(sentence_label_list)
     return label_list
 
-def wapiti_field(data, field_n=3):
+def wapiti_field(data, field_n=3, label_length=4):
     '''Extract one specific field from a dataset in the Wapiti format.
 
-    The default value is 3 for the main label (4th position).'''
+    The default value is 3 for the main label (4th position).
+    field_n: main label position
+    label_length: total length of the label'''
     split_data = utils.text_to_line(data)
     label_list = []
     for line in split_data:
@@ -66,7 +78,7 @@ def wapiti_field(data, field_n=3):
             continue
         else:
             split_line = re.split(' ', line)
-            utils.check_equality(len(split_line), 4) #2)
+            utils.check_equality(len(split_line), label_length) #2)
             #label_list.append((split_line[0], split_line[3])) # Morpheme and label
             label_list.append(split_line[field_n]) # Only the label (default)
     return label_list
@@ -107,6 +119,7 @@ def accuracy_per_gram_lex(extracted_labels):
 
 # Compute the accuracy for UNSEEN lexical glosses
 def unseen_lex_gloss_accuracy(ref_wapiti, pred_lost, gold_dict, label_type,
+                              wapiti_field_n=3, wapiti_label_length=4,
                               verbose=0):
     '''Compute the accuracy for UNSEEN lexical glosses based on a dictionary.
 
@@ -118,9 +131,10 @@ def unseen_lex_gloss_accuracy(ref_wapiti, pred_lost, gold_dict, label_type,
     #                    for label in value]
     seen_morph_label = set(gold_dict.keys())
     flat_extracted_labels = utils.flatten_2D(extract_labels(ref_wapiti,
-                                            pred_lost, label_type, source=True))
-    n_token = len(flat_extracted_labels)
-    if (verbose >= 1): print(f'There are {n_token} morphemes in total (tokens).')
+        pred_lost, label_type, source=True, wapiti_field_n=wapiti_field_n,
+        wapiti_label_length=wapiti_label_length))
+    n_tokens = len(flat_extracted_labels)
+    if (verbose >= 1): print(f'There are {n_tokens} morphemes in total (tokens).')
     # Filter source morphemes only seen during the inference
     lex_labels = [unit for unit in flat_extracted_labels
                 if not unit[1].isupper()] # Reference lexical labels only
@@ -132,7 +146,8 @@ def unseen_lex_gloss_accuracy(ref_wapiti, pred_lost, gold_dict, label_type,
                 ##and (not unit[1].isupper()))]
     # Compute the proportion of unseen morphemes
     n_unseen = len(unseen_source_labels)
-    test_morph_list = wapiti_field(ref_wapiti, field_n=3)
+    test_morph_list = wapiti_field(ref_wapiti, field_n=wapiti_field_n,
+                                   label_length=wapiti_label_length)
     test_lex_label_list = [label for label in test_morph_list if not label.isupper()]
     n_test_lex = len(test_lex_label_list)
     utils.check_equality(n_test_lex, len(lex_labels))
