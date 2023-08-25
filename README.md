@@ -36,17 +36,17 @@ A `Corpus` object is used to process the data:
 ```
 corpus = Corpus(src_data, glo_data, trg_data)
 ```
-The optional parameter `test` indicates whether it is a training or test (includes devlopment) data.
+The optional parameter `test` indicates whether it is a training or test (includes development) data.
 
 Converting the data to the Wapiti format can be done as follows:
 ```
 wapiti_text = corpus.to_wapiti_format(alignment, expand=True, verbose=False, train_index=train_index_dict, pos=True, label_format=method)
 ```
-Here, `train_index_dict` indicates the number of sentences used for training and `method` the desidered input and output configuration. See `to_wapiti.py` for more details.
+Here, `train_index_dict` indicates the number of sentences used for training and `method` the desired input and output configuration. See `to_wapiti.py` for more details.
 
 The training dictionary that might be used in the next step can be obtained under `corpus.train_dict`, which should be saved with the `pickle` package. 
 
-Note: if the original data is already split in training, development, and test data (e.g., IGT Shared Task), this step should be done separately for each of them, and all three must be combined for the following step, keeping the train, dev, test order. The next function splits one combined file into three parts.
+Note: if the original data is already split into training, development, and test data (e.g., IGT Shared Task), this step should be done separately for each of them, and all three must be combined for the following step, keeping the train, dev, test order. The next function splits one combined file into three parts.
 
 [3]: https://aclanthology.org/P10-1052.pdf
 
@@ -69,7 +69,7 @@ See `wapiti_to_lost.py` for more details.
 ### 4. Running Lost
 In the run files, the data paths should be modified: 
 - `train-spc`, `train-ref`: training search space and reference file paths
-- `devel-spc`, `devel-out`: developement search space and output paths (optional)
+- `devel-spc`, `devel-out`: development search space and output paths (optional)
 - `test-spc`, `test-out`: test search space and output paths
 - `mdl-save`, `str-save`: paths to save the model.
 

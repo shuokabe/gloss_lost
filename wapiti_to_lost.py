@@ -6,9 +6,9 @@ import re
 
 from tqdm import tqdm
 
-import cld_tools.preprocess as pp
+import gloss_lost.cld_tools.preprocess as pp #cld_tools.preprocess as pp
 import gloss_lost.utils as utils
-import spacy_processing as sp
+import gloss_lost.spacy_processing as sp #spacy_processing as sp
 
 from gloss_lost.to_wapiti import LabelHandler, PUNCTUATION_LIST, UNIT_QTY_DICT, \
                 copy_in_sentence, cap_position_in_sentence
