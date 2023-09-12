@@ -1,0 +1,31 @@
+long-CN PART-SPT around LVB-1SG.II LOC-CN completely NMLZ-across COMP live-CN white.person
+CCNJ 1.I find-CN NMLZ-work LOC-CN Stockholm CAUS1-name-T-3PL.II
+CCNJ work-1SG.II LOC-CN IBM
+CCNJ INCEP one-CN year CCNJ 1.I accompany-CN NMLZ-like-CAUS2-ANTIP-1SG.II PCNJ-CN spouse-3.II LOC-CN completely Spain reach-TR-1PL.II
+CCNJ INCEP back in return-PASS-1PL.II CCNJ separate-PASS-1PL.II LOC-CN Denmark
+CCNJ 1.I follow-CN train CCNJ go-1SG.II LOC-CN Stockholm
+CCNJ INCEP arrive.PL-1PL.II LOC-CN Stockholm CCNJ go.home-1SG.II
+CCNJ long-CN around LVB-1PL.II three-CN week REAS COMP-CN NEG-FOC hear-ANTIP-1SG.II LOC-CN place-upriver
+CCNJ go-1SG.II LOC-CN NMLZ-work-1SG.II
+VER IPFV-CN INS-on-rest
+CCNJ NEG-FOC-3.I who PROSP come-SX
+CCNJ go-1SG.II OBL-3.II 1.I-CCNJ take.PL-CN mail
+CCNJ PART-first PROSP go.home-1SG.II CCNJ short.prepare pee-1SG.II LOC-CN house go.out.PL
+CCNJ SPT-EPIS-CN LVB-1SG.II REAS COMP-1.I block.way-turn-CN door
+CCNJ INCEP IPFV-CN PROSP go.out-1SG.II CCNJ NEG-FOC DES open-CN door
+CCNJ out unable.to-PASS-1SG.II CCNJ SELF DWID what-CN try-TR-1SG.II CCNJ VER not.so-3.II
+CCNJ short.time on lay-1SG.II on INS-on-sit.PL
+lack-CN DWID around say-1SG.II
+CCNJ on hit-CN pipe 1.I-CCNJ see COMP lie.on-CN pipe PREP-OBL-CN INS-on-wash-VAL
+1.I-CCNJ all.the.way take-3.II CCNJ-1.I hit-CN pole OBL-3.II in.case-IRR DWID around LVB-CN DWID-PN who
+CCNJ NEG-FOC-DM who IRR come-SX
+because-CN INS-on-rest-CN REAS COMP-CN NEG-FOC-DM who IRR work-SX
+CCNJ say-CN thought-PASS-1SG.II PROSP good PROSP LVB-1SG.II IPFV-CN run-CN water
+CCNJ lack-CN DWID around fear-TR-1SG.II LOC-PN-DEM.PROX
+CCNJ lay-1SG.II CCNJ try sleep-PASS-1SG.II
+CCNJ VER not.so-3.II REAS COMP-1.I take-CN small pipe PR.EVID 1.I-CCNJ hit-CN door OBL-3.II
+CCNJ INCEP good-CN DISTR-long-SX CCNJ-1.I see-CN perimeter-CN house go.out.PL
+1.I-CCNJ make-CN big in hole PROSP out follow-TR-1SG.II CCNJ 3.III-CN LVB-1SG.II
+INCEP out-able-1SG.II 1.I-CCNJ CNTR-again inside pick-T-CN make-TR-1SG.II LOC-CN in house go.out.PL
+INCEP IPFV-CN work-1PL.II CCNJ INS-on-heart-1SG.II COMP-CN man.PL continually-MANR-3.I on follow-3PL.II-CN office-1SG.II
+CCNJ say-3PL.II oh 3.III Canadian girl DM-DEM.PROX AX-3.I break-CAUS2-CN house go.out.PL

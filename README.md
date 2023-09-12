@@ -10,6 +10,9 @@ The `run.sh` file contains all the parameters to run Lost.
 ## Lost for the glossing task
 Disclaimer: this is a work in progress and contains some unpractical implementation parameters or constraints. We strive to remove them gradually.
 
+Lost requires the data to be in a specific format, that can be obtained by following the step-by-step guide below. 
+The `data/` directory contains an example for the Gitksan corpus of the SIGMORPHON Shared Task.
+
 ### 0. Initial data format
 The programme needs the following data:
 - a source file (`src_data`)
@@ -17,10 +20,12 @@ The programme needs the following data:
 - a translation file (`trg_data`).
 
 Each sentence should be contained in one line and should correspond with each other.
-Preprocessing must also be done at this step; for the IGT data, the 
+Preprocessing must also be done at this step; for the Shared Task data, the IGT format is split into three with the `split_uncovered` function in the `IGT_helper.py` file.
+An example is given at `data/raw_corpus/`.
 
 ### 1. Creating an alignment file
-We used SimAlign [(Jalili Sabet et al., 2020)][2] to create an alignment between the lexical glosses and the translation words for the training data. We get an alignment file (`alignment`) where each line contains pairs of indices `i-j`, aligning lexical gloss (`i`) with the target word (`j`).
+We used SimAlign [(Jalili Sabet et al., 2020)][2] to create an alignment between the lexical glosses and the translation words for the training data. 
+We get an alignment file (`alignment`; cf. `data/raw_corpus/git_train_aligned_0.txt`), where each line contains pairs of indices `i-j`, associating a lexical gloss (`i`) with the target word (`j`). 
 
 The `IGT_helper.py` file contains some utility functions:
 - `lex_only_file` creates a corpus with lexical glosses only (which identifies fully-lowercased glosses)
@@ -43,10 +48,11 @@ Converting the data to the Wapiti format can be done as follows:
 wapiti_text = corpus.to_wapiti_format(alignment, expand=True, verbose=False, train_index=train_index_dict, pos=True, label_format=method)
 ```
 Here, `train_index_dict` indicates the number of sentences used for training and `method` the desired input and output configuration. See `to_wapiti.py` for more details.
+An example of Wapiti format file can be seen in `data/wapiti_format/`.
 
-The training dictionary that might be used in the next step can be obtained under `corpus.train_dict`, which should be saved with the `pickle` package. 
+The training dictionary that might be used in the next step can be obtained under `corpus.train_dict`, which should be saved with the `pickle` package (see `data/wapiti_format/dictionary_gitksan_train_match_31.pkl`). 
 
-Note: if the original data is already split into training, development, and test data (e.g., IGT Shared Task), this step should be done separately for each of them, and all three must be combined for the following step, keeping the train, dev, test order. The next function splits one combined file into three parts.
+Note: if the original data is already split into training, development, and test data (e.g., IGT Shared Task), this step should be done separately for each of them, and all three must be combined (using `concatenate_files` from `IGT_helper.py`, for instance) for the following step, keeping the train, dev, test order. The next function splits one combined file into three parts.
 
 [3]: https://aclanthology.org/P10-1052.pdf
 
@@ -66,6 +72,8 @@ Additional parameters can be specified, which are consistent with the previous s
 
 See `wapiti_to_lost.py` for more details.
 
+This function returns four files, as in `data/lost_format/`.
+
 ### 4. Running Lost
 In the run files, the data paths should be modified: 
 - `train-spc`, `train-ref`: training search space and reference file paths
@@ -73,7 +81,13 @@ In the run files, the data paths should be modified:
 - `test-spc`, `test-out`: test search space and output paths
 - `mdl-save`, `str-save`: paths to save the model.
 
-Launching the model is done from the terminal with `./run.sh`.
+Launching the model is done from the terminal with `./run.sh`. 
+The output for the `dist` label type can be seen at `data/output/output_gitksan_IGT_conc_match_dist_31.out`.
+
+### 5. Evaluating the output
+Using the `convert_lost_to_IGT` function from the `IGT_helper.py` file, the output from Lost can be converted back to the IGT format. The evaluation can then be carried out with the [Shared Task evaluation code][4] or a custom evaluation function.
+
+[4]: https://github.com/sigmorphon/2023glossingST/tree/main/baseline
 
 ## Settings
 Settings used in TALN:

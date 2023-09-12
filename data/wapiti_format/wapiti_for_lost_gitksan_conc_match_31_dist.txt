@@ -1,0 +1,1833 @@
+'nakw 0 5 'na akw 0 1/4 long lex ADJ 0 1/4
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+hli 0 3 hli hli 0 1/4 PART gram GRAM_GLOSS -1 -2
+daa 1 3 daa daa 0 1/4 SPT gram GRAM_GLOSS -1 -2
+'wihl F 5 'wi ihl 0 2/4 around lex NOUN 0 1/4
+wil 0 3 wil wil 0 2/4 LVB gram GRAM_GLOSS -1 -2
+'y 1 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+g̲oo 0 4 g̲o ̲oo 0 2/4 LOC gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+wag̲ayt F 6+ wag ayt 0 3/4 completely lex PRON 0 2/4
+an 0 2 an an 0 3/4 NMLZ gram GRAM_GLOSS -1 -2
+doosda 1 6+ doo sda 0 3/4 across lex ADV 0 2/4
+wil F 3 wil wil 0 4/4 COMP gram GRAM_GLOSS -1 -2
+jok̲ 0 4 jok ok̲ 0 4/4 live lex VERB 0 2/4
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+amxsiwaa F 6+ amx waa 0 4/4 white.person lex ? 0 -1
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+n F 1 n n 0 1/4 1.I gram GRAM_GLOSS -1 -2
+'wa 0 3 'wa 'wa 0 1/4 find lex VERB 0 1/4
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+an 0 2 an an 0 2/4 NMLZ gram GRAM_GLOSS -1 -2
+hahla'lst 1 6+ hah lst 0 2/4 work lex NOUN 0 2/4
+g̲oo 0 4 g̲o ̲oo 0 2/4 LOC gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+Stockholm F 6+ Sto olm 1 3/4 Stockholm lex PROPN 1 2/4
+si 0 2 si si 0 3/4 CAUS1 gram GRAM_GLOSS -1 -2
+wa 1 2 wa wa 0 4/4 name lex PRON 0 4/4
+t 2 1 t t 0 4/4 T gram GRAM_GLOSS -1 -2
+diit 2 4 dii iit 0 4/4 3PL.II gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+hahla'lst 0 6+ hah lst 0 1/4 work lex VERB 0 2/4
+'y 1 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+g̲oo 0 4 g̲o ̲oo 0 3/4 LOC gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+IBM F 3 IBM IBM 1 4/4 IBM gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+hlaa F 4 hla laa 0 1/4 INCEP gram GRAM_GLOSS -1 -2
+k'i'y 0 5 k'i i'y 0 1/4 one lex NUM 0 1/4
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+k'uuhl F 6+ k'u uhl 0 1/4 year lex NOUN 0 1/4
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+n F 1 n n 0 1/4 1.I gram GRAM_GLOSS -1 -2
+sdil 0 4 sdi dil 0 2/4 accompany lex VERB 0 3/4
+hl 1 2 hl hl 0 2/4 CN gram GRAM_GLOSS -1 -2
+an 0 2 an an 0 2/4 NMLZ gram GRAM_GLOSS -1 -2
+siip' 1 5 sii ip' 0 2/4 like lex CCONJ 0 2/4
+in 2 2 in in 0 2/4 CAUS2 gram GRAM_GLOSS -1 -2
+sxw 3 3 sxw sxw 0 2/4 ANTIP gram GRAM_GLOSS -1 -2
+'y 4 2 'y 'y 0 3/4 1SG.II gram GRAM_GLOSS -1 -2
+g̲an 0 4 g̲a ̲an 0 3/4 PCNJ gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+naks 0 4 nak aks 0 3/4 spouse lex NOUN 0 2/4
+t 1 1 t t 0 3/4 3.II gram GRAM_GLOSS -1 -2
+g̲oo 0 4 g̲o ̲oo 0 3/4 LOC gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+wag̲ayt F 6+ wag ayt 0 4/4 completely lex DET 0 3/4
+Spain F 5 Spa ain 1 4/4 Spain lex PROPN 1 4/4
+'wa 0 3 'wa 'wa 0 4/4 reach lex NOUN 0 4/4
+i 1 1 i i 1 4/4 TR gram GRAM_GLOSS -1 -2
+'m 1 2 'm 'm 0 4/4 1PL.II gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+hlaa F 4 hla laa 0 1/4 INCEP gram GRAM_GLOSS -1 -2
+guxws F 5 gux xws 0 1/4 back lex ADV 0 2/4
+luu F 3 luu luu 0 1/4 in lex ADP 0 4/4
+yalt 0 4 yal alt 0 2/4 return lex NOUN 0 2/4
+xw 1 2 xw xw 0 2/4 PASS gram GRAM_GLOSS -1 -2
+'m 2 2 'm 'm 0 2/4 1PL.II gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 3/4 CCNJ gram GRAM_GLOSS -1 -2
+baasax̲ 0 6+ baa ax̲ 0 3/4 separate lex VERB 0 3/4
+xw 1 2 xw xw 0 3/4 PASS gram GRAM_GLOSS -1 -2
+'m 2 2 'm 'm 0 3/4 1PL.II gram GRAM_GLOSS -1 -2
+g̲oo 0 4 g̲o ̲oo 0 4/4 LOC gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+Denmark F 6+ Den ark 1 4/4 Denmark lex NOUN 1 4/4
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+n F 1 n n 0 1/4 1.I gram GRAM_GLOSS -1 -2
+yuxw 0 4 yux uxw 0 1/4 follow lex CCONJ 0 1/4
+hl 1 2 hl hl 0 2/4 CN gram GRAM_GLOSS -1 -2
+train F 5 tra ain 1 2/4 train lex NOUN 1 2/4
+ii F 2 ii ii 0 2/4 CCNJ gram GRAM_GLOSS -1 -2
+yee 0 3 yee yee 0 3/4 go lex VERB 0 3/4
+'y 1 2 'y 'y 0 3/4 1SG.II gram GRAM_GLOSS -1 -2
+g̲oo 0 4 g̲o ̲oo 0 3/4 LOC gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+Stockholm F 6+ Sto olm 1 4/4 Stockholm lex PROPN 1 4/4
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+hlaa F 4 hla laa 0 1/4 INCEP gram GRAM_GLOSS -1 -2
+bakw 0 4 bak akw 0 1/4 arrive.PL lex VERB 0 1/4
+'m 1 2 'm 'm 0 2/4 1PL.II gram GRAM_GLOSS -1 -2
+g̲oo 0 4 g̲o ̲oo 0 2/4 LOC gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+Stockholm F 6+ Sto olm 1 3/4 Stockholm lex PROPN 1 2/4
+ii F 2 ii ii 0 3/4 CCNJ gram GRAM_GLOSS -1 -2
+ha'w 0 4 ha' a'w 0 4/4 go.home lex ? 0 -1
+'y 0 2 'y 'y 0 4/4 1SG.II gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+'nakw 0 5 'na akw 0 1/4 long lex ADJ 0 2/4
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+'wihl F 5 'wi ihl 0 1/4 around lex CCONJ 0 1/4
+wil 0 3 wil wil 0 1/4 LVB gram GRAM_GLOSS -1 -2
+'m 1 2 'm 'm 0 1/4 1PL.II gram GRAM_GLOSS -1 -2
+gwila'l 0 6+ gwi a'l 0 2/4 three lex NUM 0 2/4
+hl 1 2 hl hl 0 2/4 CN gram GRAM_GLOSS -1 -2
+g̲anuutxw F 6+ g̲a txw 0 2/4 week lex NOUN 0 2/4
+g̲an F 4 g̲a ̲an 0 2/4 REAS gram GRAM_GLOSS -1 -2
+wil 0 3 wil wil 0 2/4 COMP gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+nee 0 3 nee nee 0 3/4 NEG gram GRAM_GLOSS -1 -2
+dii 1 3 dii dii 0 3/4 FOC gram GRAM_GLOSS -1 -2
+lax̲'ni 0 6+ lax 'ni 0 3/4 hear lex AUX 0 3/4
+sxw 1 3 sxw sxw 0 3/4 ANTIP gram GRAM_GLOSS -1 -2
+'y 2 2 'y 'y 0 4/4 1SG.II gram GRAM_GLOSS -1 -2
+g̲oo 0 4 g̲o ̲oo 0 4/4 LOC gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+gi 0 2 gi gi 0 4/4 place lex NOUN 0 2/4
+geenix 0 6+ gee nix 0 4/4 upriver lex ADV 0 1/4
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+yee 0 3 yee yee 0 1/4 go lex VERB 0 2/4
+'y 1 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+g̲oo 0 4 g̲o ̲oo 0 2/4 LOC gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+an 0 2 an an 0 3/4 NMLZ gram GRAM_GLOSS -1 -2
+hahla'lst 1 6+ hah lst 0 4/4 work lex NOUN 0 4/4
+'y 1 2 'y 'y 0 4/4 1SG.II gram GRAM_GLOSS -1 -2
+
+ap F 2 ap ap 0 1/4 VER gram GRAM_GLOSS -1 -2
+yukw 0 4 yuk ukw 0 1/4 IPFV gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 2/4 CN gram GRAM_GLOSS -1 -2
+ha 0 2 ha ha 0 3/4 INS gram GRAM_GLOSS -1 -2
+'nii 1 4 'ni nii 0 3/4 on lex CCONJ 0 1/4
+sgwaa'ytxw 1 6+ sgw txw 0 4/4 rest lex PRON 0 2/4
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+nee 0 3 nee nee 0 1/4 NEG gram GRAM_GLOSS -1 -2
+dii 1 3 dii dii 0 2/4 FOC gram GRAM_GLOSS -1 -2
+t 2 1 t t 0 2/4 3.I gram GRAM_GLOSS -1 -2
+naa F 3 naa naa 0 3/4 who lex CCONJ 0 1/4
+dim F 3 dim dim 0 3/4 PROSP gram GRAM_GLOSS -1 -2
+'witxw 0 6+ 'wi txw 0 4/4 come lex AUX 0 3/4
+it 0 2 it it 0 4/4 SX gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+yee 0 3 yee yee 0 1/4 go lex VERB 0 1/4
+'y 1 2 'y 'y 0 1/4 1SG.II gram GRAM_GLOSS -1 -2
+loo 0 3 loo loo 0 2/4 OBL gram GRAM_GLOSS -1 -2
+t 1 1 t t 0 2/4 3.II gram GRAM_GLOSS -1 -2
+n 0 1 n n 0 3/4 1.I gram GRAM_GLOSS -1 -2
+ii 1 2 ii ii 0 3/4 CCNJ gram GRAM_GLOSS -1 -2
+dok̲ 0 4 dok ok̲ 0 3/4 take.PL lex PRON 0 1/4
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+mail'y F 6+ mai l'y 0 4/4 mail lex NOUN 0 4/4
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+hla 0 3 hla hla 0 1/4 PART gram GRAM_GLOSS -1 -2
+g̲ook̲ 1 6+ g̲o ok̲ 0 1/4 first lex CCONJ 0 1/4
+dim F 3 dim dim 0 1/4 PROSP gram GRAM_GLOSS -1 -2
+ha'w 0 4 ha' a'w 0 2/4 go.home lex ? 0 -1
+'y 1 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 2/4 CCNJ gram GRAM_GLOSS -1 -2
+ky'aa F 5 ky' 'aa 0 3/4 short.prepare lex ? 0 -1
+isxw 0 4 isx sxw 0 3/4 pee lex NOUN 0 3/4
+'y 1 2 'y 'y 0 3/4 1SG.II gram GRAM_GLOSS -1 -2
+g̲oo 0 4 g̲o ̲oo 0 3/4 LOC gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+wilp F 4 wil ilp 0 4/4 house lex VERB 0 2/4
+xseek̲ F 6+ xse ek̲ 0 4/4 go.out.PL lex ? 0 -1
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+daa 0 3 daa daa 0 1/4 SPT gram GRAM_GLOSS -1 -2
+imaa 1 4 ima maa 0 1/4 EPIS gram GRAM_GLOSS -1 -2
+hl 2 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+wil 0 3 wil wil 0 2/4 LVB gram GRAM_GLOSS -1 -2
+'y 1 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+g̲an F 4 g̲a ̲an 0 2/4 REAS gram GRAM_GLOSS -1 -2
+wil 0 3 wil wil 0 3/4 COMP gram GRAM_GLOSS -1 -2
+ni 1 2 ni ni 0 3/4 1.I gram GRAM_GLOSS -1 -2
+sg̲a 0 4 sg̲ g̲a 0 3/4 block.way lex ? 0 -1
+t'akw 1 5 t'a akw 0 4/4 turn lex AUX 0 1/4
+hl 2 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+aats'ip F 6+ aat 'ip 0 4/4 door lex DET 0 4/4
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+hlaa F 4 hla laa 0 1/4 INCEP gram GRAM_GLOSS -1 -2
+yukw 0 4 yuk ukw 0 1/4 IPFV gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 2/4 PROSP gram GRAM_GLOSS -1 -2
+xsaxw 0 5 xsa axw 0 2/4 go.out lex ? 0 -1
+'y 1 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 3/4 CCNJ gram GRAM_GLOSS -1 -2
+nee 0 3 nee nee 0 3/4 NEG gram GRAM_GLOSS -1 -2
+dii 1 3 dii dii 0 3/4 FOC gram GRAM_GLOSS -1 -2
+'nim F 4 'ni nim 0 3/4 DES gram GRAM_GLOSS -1 -2
+k̲'ak̲ 0 6+ k̲' ak̲ 0 4/4 open lex PART 0 4/4
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+aats'ip F 6+ aat 'ip 0 4/4 door lex NOUN 0 3/4
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+xsi F 3 xsi xsi 0 1/4 out lex VERB 0 2/4
+hlguxws 0 6+ hlg xws 0 1/4 unable.to lex ? 0 -1
+xw 1 2 xw xw 0 1/4 PASS gram GRAM_GLOSS -1 -2
+'y 2 2 'y 'y 0 1/4 1SG.II gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 2/4 CCNJ gram GRAM_GLOSS -1 -2
+lip F 3 lip lip 0 2/4 SELF gram GRAM_GLOSS -1 -2
+ligi F 4 lig igi 0 2/4 DWID gram GRAM_GLOSS -1 -2
+agwi 0 4 agw gwi 0 2/4 what lex CCONJ 0 2/4
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+bak̲ 0 4 bak ak̲ 0 3/4 try lex PRON 0 3/4
+a 1 1 a a 0 3/4 TR gram GRAM_GLOSS -1 -2
+'y 2 2 'y 'y 0 3/4 1SG.II gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 4/4 CCNJ gram GRAM_GLOSS -1 -2
+ap F 2 ap ap 0 4/4 VER gram GRAM_GLOSS -1 -2
+nee 0 3 nee nee 0 4/4 not.so lex ? 0 -1
+t 0 1 t t 0 4/4 3.II gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+k̲'aa F 5 k̲' 'aa 0 1/4 short.time lex ? 0 -1
+'nii F 4 'ni nii 0 1/4 on lex ADP 0 2/4
+giihl 0 5 gii ihl 0 2/4 lay lex VERB 0 1/4
+'y 1 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+lax̲ F 4 lax ax̲ 0 3/4 on lex DET 0 2/4
+ha 0 2 ha ha 0 3/4 INS gram GRAM_GLOSS -1 -2
+'nii 1 4 'ni nii 0 4/4 on lex ADP 0 3/4
+wan 1 3 wan wan 0 4/4 sit.PL lex NOUN 0 3/4
+
+ak̲ 0 3 ak̲ ak̲ 0 1/4 lack lex AUX 0 1/4
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+ligi F 4 lig igi 0 2/4 DWID gram GRAM_GLOSS -1 -2
+'wihl F 5 'wi ihl 0 3/4 around lex NOUN 0 4/4
+he 0 2 he he 0 3/4 say lex PART 0 2/4
+'y 0 2 'y 'y 0 4/4 1SG.II gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+'nii F 4 'ni nii 0 1/4 on lex CCONJ 0 1/4
+yats 0 4 yat ats 0 1/4 hit lex VERB 0 1/4
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+pipe F 4 pip ipe 1 1/4 pipe lex NOUN 1 2/4
+n 0 1 n n 0 2/4 1.I gram GRAM_GLOSS -1 -2
+ii 1 2 ii ii 0 2/4 CCNJ gram GRAM_GLOSS -1 -2
+gya'a F 5 gya a'a 0 2/4 see lex VERB 0 2/4
+wil F 3 wil wil 0 2/4 COMP gram GRAM_GLOSS -1 -2
+sgi 0 3 sgi sgi 0 2/4 lie.on lex ? 0 -1
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+pipe F 4 pip ipe 1 3/4 pipe lex NOUN 1 3/4
+a 0 1 a a 1 3/4 PREP gram GRAM_GLOSS -1 -2
+loo 1 3 loo loo 0 3/4 OBL gram GRAM_GLOSS -1 -2
+hl 2 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+ha 0 2 ha ha 0 4/4 INS gram GRAM_GLOSS -1 -2
+'nii 1 4 'ni nii 0 4/4 on lex DET 0 4/4
+yo'oxs 2 6+ yo' oxs 0 4/4 wash lex NOUN 0 4/4
+xw 2 2 xw xw 0 4/4 VAL gram GRAM_GLOSS -1 -2
+
+n 0 1 n n 0 1/4 1.I gram GRAM_GLOSS -1 -2
+ii 1 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+xhlii F 5 xhl lii 0 1/4 all.the.way lex ? 0 -1
+guu 0 3 guu guu 0 1/4 take lex VERB 0 1/4
+t 1 1 t t 0 1/4 3.II gram GRAM_GLOSS -1 -2
+ii 0 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+n 1 1 n n 0 2/4 1.I gram GRAM_GLOSS -1 -2
+yats 0 4 yat ats 0 2/4 hit lex VERB 0 2/4
+hl 1 2 hl hl 0 2/4 CN gram GRAM_GLOSS -1 -2
+pole F 4 pol ole 1 2/4 pole lex NOUN 1 3/4
+loo 0 3 loo loo 0 2/4 OBL gram GRAM_GLOSS -1 -2
+t 1 1 t t 0 3/4 3.II gram GRAM_GLOSS -1 -2
+up 0 2 up up 0 3/4 in.case lex ? 0 -1
+ji 1 2 ji ji 0 3/4 IRR gram GRAM_GLOSS -1 -2
+ligi F 4 lig igi 0 3/4 DWID gram GRAM_GLOSS -1 -2
+'wihl F 5 'wi ihl 0 3/4 around lex ADV 0 4/4
+wil 0 3 wil wil 0 4/4 LVB gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+ligi 0 4 lig igi 0 4/4 DWID gram GRAM_GLOSS -1 -2
+t 1 1 t t 0 4/4 PN gram GRAM_GLOSS -1 -2
+naa F 3 naa naa 0 4/4 who lex CCONJ 0 2/4
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+nee 0 3 nee nee 0 1/4 NEG gram GRAM_GLOSS -1 -2
+dii 1 3 dii dii 0 2/4 FOC gram GRAM_GLOSS -1 -2
+t 2 1 t t 0 2/4 DM gram GRAM_GLOSS -1 -2
+naa F 3 naa naa 0 3/4 who lex CCONJ 0 1/4
+ji F 2 ji ji 0 3/4 IRR gram GRAM_GLOSS -1 -2
+'witxw 0 6+ 'wi txw 0 4/4 come lex VERB 0 4/4
+it 0 2 it it 0 4/4 SX gram GRAM_GLOSS -1 -2
+
+agwiyukw 0 6+ agw ukw 0 1/4 because lex SCONJ 0 1/4
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+ha 0 2 ha ha 0 1/4 INS gram GRAM_GLOSS -1 -2
+'nii 1 4 'ni nii 0 1/4 on lex ADP 0 4/4
+sgwaa'ytxw 2 6+ sgw txw 0 2/4 rest lex AUX 0 1/4
+hl 3 2 hl hl 0 2/4 CN gram GRAM_GLOSS -1 -2
+g̲an F 4 g̲a ̲an 0 2/4 REAS gram GRAM_GLOSS -1 -2
+wil 0 3 wil wil 0 2/4 COMP gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+nee 0 3 nee nee 0 3/4 NEG gram GRAM_GLOSS -1 -2
+dii 1 3 dii dii 0 3/4 FOC gram GRAM_GLOSS -1 -2
+t 2 1 t t 0 3/4 DM gram GRAM_GLOSS -1 -2
+naa F 3 naa naa 0 4/4 who lex PRON 0 1/4
+ji F 2 ji ji 0 4/4 IRR gram GRAM_GLOSS -1 -2
+hahla'lst 0 6+ hah lst 0 4/4 work lex NOUN 0 4/4
+it 0 2 it it 1 4/4 SX gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+he 0 2 he he 0 1/4 say lex VERB 0 1/4
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+t'ilx̲oo 0 6+ t'i ̲oo 0 1/4 thought lex NOUN 0 1/4
+txw 1 3 txw txw 0 2/4 PASS gram GRAM_GLOSS -1 -2
+'y 2 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 2/4 PROSP gram GRAM_GLOSS -1 -2
+aam F 3 aam aam 0 2/4 good lex PRON 0 1/4
+dim F 3 dim dim 0 3/4 PROSP gram GRAM_GLOSS -1 -2
+wil 0 3 wil wil 0 3/4 LVB gram GRAM_GLOSS -1 -2
+'y 1 2 'y 'y 0 3/4 1SG.II gram GRAM_GLOSS -1 -2
+yukw 0 4 yuk ukw 0 3/4 IPFV gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+bax̲ 0 4 bax ax̲ 0 4/4 run lex VERB 0 4/4
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+aks F 3 aks aks 0 4/4 water lex NOUN 0 4/4
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+ak̲ 0 3 ak̲ ak̲ 0 1/4 lack lex PRON 0 2/4
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+ligi F 4 lig igi 0 2/4 DWID gram GRAM_GLOSS -1 -2
+'wihl F 5 'wi ihl 0 2/4 around lex PRON 0 1/4
+baasx 0 5 baa asx 0 2/4 fear lex VERB 0 4/4
+i 1 1 i i 0 3/4 TR gram GRAM_GLOSS -1 -2
+'y 2 2 'y 'y 0 3/4 1SG.II gram GRAM_GLOSS -1 -2
+g̲oo 0 4 g̲o ̲oo 0 3/4 LOC gram GRAM_GLOSS -1 -2
+s 1 1 s s 0 4/4 PN gram GRAM_GLOSS -1 -2
+xwin 1 4 xwi win 0 4/4 DEM.PROX gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+giihl 0 5 gii ihl 0 1/4 lay lex VERB 0 2/4
+'y 1 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 2/4 CCNJ gram GRAM_GLOSS -1 -2
+si'ix F 5 si' 'ix 0 3/4 try lex VERB 0 3/4
+wok̲ 0 4 wok ok̲ 0 3/4 sleep lex VERB 0 4/4
+s 1 1 s s 0 4/4 PASS gram GRAM_GLOSS -1 -2
+'y 1 2 'y 'y 0 4/4 1SG.II gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+ap F 2 ap ap 0 1/4 VER gram GRAM_GLOSS -1 -2
+nee 0 3 nee nee 0 1/4 not.so lex ? 0 -1
+t 1 1 t t 0 1/4 3.II gram GRAM_GLOSS -1 -2
+g̲an F 4 g̲a ̲an 0 1/4 REAS gram GRAM_GLOSS -1 -2
+wil 0 3 wil wil 0 2/4 COMP gram GRAM_GLOSS -1 -2
+na 1 2 na na 0 2/4 1.I gram GRAM_GLOSS -1 -2
+guu 0 3 guu guu 0 2/4 take lex PRON 0 2/4
+hl 1 2 hl hl 0 2/4 CN gram GRAM_GLOSS -1 -2
+hlgu F 4 hlg lgu 0 2/4 small lex DET 0 2/4
+pipe F 4 pip ipe 1 3/4 pipe lex ADJ 1 2/4
+gi F 2 gi gi 0 3/4 PR.EVID gram GRAM_GLOSS -1 -2
+n 0 1 n n 0 3/4 1.I gram GRAM_GLOSS -1 -2
+ii 1 2 ii ii 0 3/4 CCNJ gram GRAM_GLOSS -1 -2
+yats 0 4 yat ats 0 3/4 hit lex PRON 0 3/4
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+aats'ip F 6+ aat 'ip 0 4/4 door lex DET 0 4/4
+loo 0 3 loo loo 0 4/4 OBL gram GRAM_GLOSS -1 -2
+t 0 1 t t 0 4/4 3.II gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+hlaa F 4 hla laa 0 1/4 INCEP gram GRAM_GLOSS -1 -2
+am 0 2 am am 0 1/4 good lex CCONJ 0 1/4
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+g̲a 0 3 g̲a g̲a 0 2/4 DISTR gram GRAM_GLOSS -1 -2
+'nakw 1 5 'na akw 0 2/4 long lex DET 0 1/4
+it 2 2 it it 0 2/4 SX gram GRAM_GLOSS -1 -2
+ii 0 2 ii ii 0 2/4 CCNJ gram GRAM_GLOSS -1 -2
+n 1 1 n n 0 3/4 1.I gram GRAM_GLOSS -1 -2
+gya'a 0 5 gya a'a 0 3/4 see lex VERB 0 3/4
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+g̲adaax 0 6+ g̲a aax 0 3/4 perimeter lex NOUN 0 1/4
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+wilp F 4 wil ilp 0 4/4 house lex AUX 0 2/4
+xseek̲ F 6+ xse ek̲ 0 4/4 go.out.PL lex ? 0 -1
+
+n 0 1 n n 0 1/4 1.I gram GRAM_GLOSS -1 -2
+ii 1 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+jap 0 3 jap jap 0 1/4 make lex VERB 0 1/4
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+'wii F 4 'wi wii 0 1/4 big lex ADJ 0 1/4
+luu F 3 luu luu 0 2/4 in lex PART 0 2/4
+no'o F 4 no' o'o 0 2/4 hole lex NOUN 0 2/4
+dim F 3 dim dim 0 2/4 PROSP gram GRAM_GLOSS -1 -2
+xsi F 3 xsi xsi 0 2/4 out lex ADV 0 3/4
+yuxw 0 4 yux uxw 0 3/4 follow lex VERB 0 2/4
+i 1 1 i i 1 3/4 TR gram GRAM_GLOSS -1 -2
+'y 2 2 'y 'y 0 3/4 1SG.II gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 3/4 CCNJ gram GRAM_GLOSS -1 -2
+'nit 0 4 'ni nit 0 4/4 3.III gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+wil 0 3 wil wil 0 4/4 LVB gram GRAM_GLOSS -1 -2
+'y 0 2 'y 'y 0 4/4 1SG.II gram GRAM_GLOSS -1 -2
+
+hlaa F 4 hla laa 0 1/4 INCEP gram GRAM_GLOSS -1 -2
+xsi 0 3 xsi xsi 0 1/4 out lex ADV 0 4/4
+'ak̲xw 1 6+ 'ak ̲xw 0 1/4 able lex PRON 0 1/4
+'y 2 2 'y 'y 0 1/4 1SG.II gram GRAM_GLOSS -1 -2
+n 0 1 n n 0 1/4 1.I gram GRAM_GLOSS -1 -2
+ii 1 2 ii ii 0 2/4 CCNJ gram GRAM_GLOSS -1 -2
+g̲ay 0 4 g̲a ̲ay 0 2/4 CNTR gram GRAM_GLOSS -1 -2
+hoo 1 3 hoo hoo 0 2/4 again lex ADV 0 2/4
+ts'imil F 6+ ts' mil 0 2/4 inside lex PRON 0 1/4
+t'aahl 0 6+ t'a ahl 0 2/4 pick lex PRON 0 2/4
+i 1 1 i i 1 3/4 T gram GRAM_GLOSS -1 -2
+hl 2 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+jap 0 3 jap jap 0 3/4 make lex VERB 0 1/4
+i 1 1 i i 1 3/4 TR gram GRAM_GLOSS -1 -2
+'y 2 2 'y 'y 0 3/4 1SG.II gram GRAM_GLOSS -1 -2
+g̲oo 0 4 g̲o ̲oo 0 4/4 LOC gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+ts'im F 5 ts' 'im 0 4/4 in lex ADP 0 4/4
+wilp F 4 wil ilp 0 4/4 house lex VERB 0 2/4
+xseek̲ F 6+ xse ek̲ 0 4/4 go.out.PL lex ? 0 -1
+
+hlaa F 4 hla laa 0 1/4 INCEP gram GRAM_GLOSS -1 -2
+yukw 0 4 yuk ukw 0 1/4 IPFV gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+hahla'lst 0 6+ hah lst 0 1/4 work lex NOUN 0 2/4
+'m 1 2 'm 'm 0 1/4 1PL.II gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+ha 0 2 ha ha 0 2/4 INS gram GRAM_GLOSS -1 -2
+'nii 1 4 'ni nii 0 2/4 on lex ADP 0 1/4
+g̲oot 2 5 g̲o oot 0 2/4 heart lex ADV 0 1/4
+'y 3 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+wil 0 3 wil wil 0 2/4 COMP gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+ii'uxwt F 6+ ii' xwt 0 3/4 man.PL lex NOUN 0 3/4
+g̲ani 0 5 g̲a ani 0 3/4 continually lex VERB 0 3/4
+wila 1 4 wil ila 0 3/4 MANR gram GRAM_GLOSS -1 -2
+t 2 1 t t 0 3/4 3.I gram GRAM_GLOSS -1 -2
+'nii F 4 'ni nii 0 3/4 on lex CCONJ 0 2/4
+yuxw 0 4 yux uxw 0 4/4 follow lex PRON 0 2/4
+diit 1 4 dii iit 0 4/4 3PL.II gram GRAM_GLOSS -1 -2
+hl 2 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+office 0 6+ off ice 1 4/4 office lex NOUN 1 4/4
+'y 0 2 'y 'y 0 4/4 1SG.II gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+he 0 2 he he 0 1/4 say lex VERB 0 1/4
+diit 1 4 dii iit 0 1/4 3PL.II gram GRAM_GLOSS -1 -2
+oo F 2 oo oo 0 1/4 oh lex INTJ 0 1/4
+'nit F 4 'ni nit 0 2/4 3.III gram GRAM_GLOSS -1 -2
+Canadanska F 6+ Can ska 1 2/4 Canadian lex ADJ 0 3/4
+flika F 5 fli ika 1 2/4 girl lex NOUN 0 3/4
+t 0 1 t t 0 2/4 DM gram GRAM_GLOSS -1 -2
+un 1 2 un un 0 3/4 DEM.PROX gram GRAM_GLOSS -1 -2
+an 0 2 an an 0 3/4 AX gram GRAM_GLOSS -1 -2
+t 1 1 t t 0 3/4 3.I gram GRAM_GLOSS -1 -2
+kw'as 0 5 kw' 'as 0 3/4 break lex VERB 0 4/4
+in 1 2 in in 0 4/4 CAUS2 gram GRAM_GLOSS -1 -2
+hl 2 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+wilp F 4 wil ilp 0 4/4 house lex AUX 0 2/4
+xseek̲ F 6+ xse ek̲ 0 4/4 go.out.PL lex ? 0 -1
+
+k̲'ay F 5 k̲' 'ay 0 1/4 still lex SCONJ 0 1/4
+yukw 0 4 yuk ukw 0 1/4 IPFV gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+hlgu 0 4 hlg lgu 0 1/4 small lex PRON 0 1/4
+ts'uusk 1 6+ ts' usk 0 1/4 little lex AUX 0 1/4
+'y 2 2 'y 'y 0 1/4 1SG.II gram GRAM_GLOSS -1 -2
+k̲'ay F 5 k̲' 'ay 0 2/4 still lex ADJ 0 1/4
+hlgu 0 4 hlg lgu 0 2/4 small lex PRON 0 1/4
+ts'uusk 1 6+ ts' usk 0 2/4 little lex NOUN 0 1/4
+'y 2 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+dis F 3 dis dis 0 2/4 time lex VERB 0 1/4
+wil 0 3 wil wil 0 2/4 COMP gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+hogwin F 6+ hog win 0 3/4 toward lex ADP 0 2/4
+kw'itxw 0 6+ kw' txw 0 3/4 come lex PRON 0 2/4
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+hli F 3 hli hli 0 3/4 PART gram GRAM_GLOSS -1 -2
+gu'm F 4 gu' u'm 0 3/4 relative lex VERB 0 2/4
+a 0 1 a a 0 4/4 PREP gram GRAM_GLOSS -1 -2
+loo 1 3 loo loo 0 4/4 OBL gram GRAM_GLOSS -1 -2
+hl 2 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+g̲a'a 0 5 g̲a a'a 0 4/4 LOC gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+Gijigyukwhla'a F 6+ Gij a'a 0 4/4 Gitsegyukla lex ADP 0 2/4
+
+k̲'ay F 5 k̲' 'ay 0 1/4 still lex PRON 0 1/4
+yukw 0 4 yuk ukw 0 1/4 IPFV gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+jok̲ 0 4 jok ok̲ 0 1/4 live lex AUX 0 1/4
+'m 1 2 'm 'm 0 2/4 1PL.II gram GRAM_GLOSS -1 -2
+g̲a'a 0 5 g̲a a'a 0 2/4 LOC gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 2/4 CN gram GRAM_GLOSS -1 -2
+ts'im F 5 ts' 'im 0 2/4 in lex ADV 0 1/4
+wilp 0 4 wil ilp 0 3/4 house lex VERB 0 2/4
+s 1 1 s s 0 3/4 PN gram GRAM_GLOSS -1 -2
+nox̲ 0 4 nox ox̲ 0 3/4 mother lex ADP 0 2/4
+'m 1 2 'm 'm 0 3/4 1PL.II gram GRAM_GLOSS -1 -2
+g̲an F 4 g̲a ̲an 0 4/4 PCNJ gram GRAM_GLOSS -1 -2
+nigwoot 0 6+ nig oot 0 4/4 father lex PRON 0 2/4
+'m 1 2 'm 'm 0 4/4 1PL.II gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+hogwin F 6+ hog win 0 1/4 toward lex CCONJ 0 1/4
+kw'itxw 0 6+ kw' txw 0 1/4 come lex NOUN 0 1/4
+s 1 1 s s 0 1/4 PN gram GRAM_GLOSS -1 -2
+Man 0 3 Man Man 1 2/4 Man lex VERB 1 1/4
+hl 1 2 hl hl 0 2/4 CN gram GRAM_GLOSS -1 -2
+wa 0 2 wa wa 0 2/4 name lex ADP 0 2/4
+t 1 1 t t 0 3/4 3.II gram GRAM_GLOSS -1 -2
+Man F 3 Man Man 1 3/4 Man lex PRON 1 2/4
+hogwin F 6+ hog win 0 3/4 toward lex AUX 0 2/4
+kw'itxw F 6+ kw' txw 0 4/4 arrive lex VERB 0 3/4
+Jacob F 5 Jac cob 1 4/4 Jacob lex PROPN 1 3/4
+Brown F 5 Bro own 1 4/4 Brown lex PROPN 1 3/4
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+hasak̲ 0 6+ has ak̲ 0 1/4 want lex PRON 0 1/4
+t 1 1 t t 0 1/4 3.II gram GRAM_GLOSS -1 -2
+dim 0 3 dim dim 0 1/4 PROSP gram GRAM_GLOSS -1 -2
+t 1 1 t t 0 1/4 3.I gram GRAM_GLOSS -1 -2
+mehl 0 4 meh ehl 0 2/4 tell lex VERB 0 1/4
+i 1 1 i i 0 2/4 T gram GRAM_GLOSS -1 -2
+hl 2 2 hl hl 0 2/4 CN gram GRAM_GLOSS -1 -2
+wila F 4 wil ila 0 2/4 MANR gram GRAM_GLOSS -1 -2
+wil 0 3 wil wil 0 3/4 LVB gram GRAM_GLOSS -1 -2
+t 1 1 t t 0 3/4 3.II gram GRAM_GLOSS -1 -2
+win F 3 win win 0 3/4 COMP gram GRAM_GLOSS -1 -2
+yukw 0 4 yuk ukw 0 3/4 IPFV gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+silin 0 5 sil lin 0 4/4 hunt lex PART 0 1/4
+asxw 1 4 asx sxw 0 4/4 ANTIP gram GRAM_GLOSS -1 -2
+t 2 1 t t 0 4/4 3.II gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+hlaa F 4 hla laa 0 1/4 INCEP gram GRAM_GLOSS -1 -2
+yukw F 4 yuk ukw 0 2/4 IPFV gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 2/4 PROSP gram GRAM_GLOSS -1 -2
+saa F 3 saa saa 0 3/4 away lex CCONJ 0 1/4
+yee 0 3 yee yee 0 3/4 go lex SCONJ 0 2/4
+t 1 1 t t 0 4/4 3.II gram GRAM_GLOSS -1 -2
+
+ii 0 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+t 1 1 t t 0 1/4 3.I gram GRAM_GLOSS -1 -2
+dok̲ 0 4 dok ok̲ 0 1/4 take.PL lex CCONJ 0 1/4
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+walk̲'a F 6+ wal ̲'a 0 1/4 all lex PRON 0 1/4
+'nit 0 4 'ni nit 0 2/4 3.III gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 2/4 CN gram GRAM_GLOSS -1 -2
+g̲abii 0 6+ g̲a bii 0 2/4 CNT.AMT gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 2/4 CN gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 2/4 PROSP gram GRAM_GLOSS -1 -2
+hoox 0 4 hoo oox 0 3/4 use lex VERB 0 1/4
+i 1 1 i i 0 3/4 TR gram GRAM_GLOSS -1 -2
+t 2 1 t t 0 3/4 3.II gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 3/4 PROSP gram GRAM_GLOSS -1 -2
+wila F 4 wil ila 0 3/4 MANR gram GRAM_GLOSS -1 -2
+da'ak̲hlxw F 6+ da' lxw 0 4/4 CIRC.PSBL gram GRAM_GLOSS -1 -2
+siilin 0 6+ sii lin 0 4/4 hunt lex PRON 0 1/4
+asxw 1 4 asx sxw 0 4/4 ANTIP gram GRAM_GLOSS -1 -2
+t 2 1 t t 0 4/4 3.II gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+hasak̲ 0 6+ has ak̲ 0 1/4 want lex CCONJ 0 1/4
+t 1 1 t t 0 1/4 3.II gram GRAM_GLOSS -1 -2
+dim 0 3 dim dim 0 1/4 PROSP gram GRAM_GLOSS -1 -2
+t 1 1 t t 0 2/4 3.I gram GRAM_GLOSS -1 -2
+mehl 0 4 meh ehl 0 2/4 tell lex PRON 0 1/4
+i 1 1 i i 0 2/4 T gram GRAM_GLOSS -1 -2
+t 2 1 t t 0 3/4 3.II gram GRAM_GLOSS -1 -2
+loo 0 3 loo loo 0 3/4 OBL gram GRAM_GLOSS -1 -2
+'m 1 2 'm 'm 0 3/4 1PL.II gram GRAM_GLOSS -1 -2
+wila F 4 wil ila 0 4/4 MANR gram GRAM_GLOSS -1 -2
+wil 0 3 wil wil 0 4/4 LVB gram GRAM_GLOSS -1 -2
+t 1 1 t t 0 4/4 3.II gram GRAM_GLOSS -1 -2
+
+ii 0 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+t 1 1 t t 0 1/4 3.I gram GRAM_GLOSS -1 -2
+wen 0 3 wen wen 0 1/4 sit.PL lex CCONJ 0 1/4
+di 1 2 di di 0 1/4 T gram GRAM_GLOSS -1 -2
+'m 2 2 'm 'm 0 1/4 1PL.II gram GRAM_GLOSS -1 -2
+t'aa 0 4 t'a 'aa 0 2/4 sit lex PRON 0 1/4
+t 1 1 t t 0 2/4 T gram GRAM_GLOSS -1 -2
+i 2 1 i i 0 2/4 TR gram GRAM_GLOSS -1 -2
+t 3 1 t t 0 2/4 3.II gram GRAM_GLOSS -1 -2
+'nuu'm F 6+ 'nu u'm 0 3/4 1PL.III gram GRAM_GLOSS -1 -2
+'nii'y F 6+ 'ni i'y 0 3/4 1SG.III gram GRAM_GLOSS -1 -2
+g̲an 0 4 g̲a ̲an 0 3/4 PCNJ gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+g̲a 0 3 g̲a g̲a 0 4/4 PL gram GRAM_GLOSS -1 -2
+sdik'eekw 1 6+ sdi ekw 0 4/4 sibling lex VERB 0 1/4
+s 2 1 s s 0 4/4 PASS gram GRAM_GLOSS -1 -2
+'y 3 2 'y 'y 0 4/4 1SG.II gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+'nii F 4 'ni nii 0 1/4 on lex CCONJ 0 1/4
+win F 3 win win 0 1/4 COMP gram GRAM_GLOSS -1 -2
+he 0 2 he he 1 1/4 say lex ADV 0 1/4
+t 1 1 t t 0 2/4 3.II gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 2/4 PROSP gram GRAM_GLOSS -1 -2
+mehl 0 4 meh ehl 0 2/4 tell lex PRON 0 1/4
+d 1 1 d d 0 3/4 T gram GRAM_GLOSS -1 -2
+i 2 1 i i 1 3/4 TR gram GRAM_GLOSS -1 -2
+'y 3 2 'y 'y 0 3/4 1SG.II gram GRAM_GLOSS -1 -2
+t 0 1 t t 0 3/4 PN gram GRAM_GLOSS -1 -2
+xwin 1 4 xwi win 0 4/4 DEM.PROX gram GRAM_GLOSS -1 -2
+loo 0 3 loo loo 0 4/4 OBL gram GRAM_GLOSS -1 -2
+n 1 1 n n 0 4/4 2SG.II gram GRAM_GLOSS -1 -2
+
+yukw 0 4 yuk ukw 0 1/4 IPFV gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+yee 0 3 yee yee 0 1/4 go lex PRON 0 1/4
+'y 1 2 'y 'y 0 1/4 1SG.II gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 1/4 PROSP gram GRAM_GLOSS -1 -2
+silin 0 5 sil lin 0 2/4 hunt lex AUX 0 1/4
+asxw 1 4 asx sxw 0 2/4 ANTIP gram GRAM_GLOSS -1 -2
+'y 2 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 2/4 CCNJ gram GRAM_GLOSS -1 -2
+t'aa 0 4 t'a 'aa 0 3/4 sit lex VERB 0 1/4
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+bisde'y F 6+ bis e'y 0 3/4 grouse lex PART 0 1/4
+sg̲a F 4 sg̲ g̲a 0 3/4 block.way lex ? 0 -1
+t'aa 0 4 t'a 'aa 0 3/4 sit lex DET 0 2/4
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+bisde'y F 6+ bis e'y 0 4/4 grouse lex NOUN 0 2/4
+diye F 4 diy iye 0 4/4 QUOT.3SG gram GRAM_GLOSS -1 -2
+'nit F 4 'ni nit 0 4/4 3.III gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+n F 1 n n 0 1/4 1.I gram GRAM_GLOSS -1 -2
+gya'a 0 5 gya a'a 0 2/4 see lex CCONJ 0 1/4
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+x̲adaa F 6+ x̲a daa 0 4/4 moose lex PRON 0 1/4
+
+yukw 0 4 yuk ukw 0 1/4 IPFV gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+hasak̲ 0 6+ has ak̲ 0 1/4 want lex PRON 0 1/4
+'y 1 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 2/4 PROSP gram GRAM_GLOSS -1 -2
+n F 1 n n 0 2/4 1.I gram GRAM_GLOSS -1 -2
+tx̲oog̲ 0 6+ tx̲ og̲ 0 3/4 eat lex VERB 0 1/4
+in 1 2 in in 0 3/4 CAUS2 gram GRAM_GLOSS -1 -2
+hl 2 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+g̲al 0 4 g̲a ̲al 0 4/4 contain lex PART 0 2/4
+ts'ep 1 5 ts' 'ep 0 4/4 village.people lex ? 0 -1
+'y 2 2 'y 'y 0 4/4 1SG.II gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+ji 0 2 ji ji 0 1/4 IRR gram GRAM_GLOSS -1 -2
+da 1 2 da da 0 2/4 SPT gram GRAM_GLOSS -1 -2
+hlen 0 4 hle len 0 2/4 move lex CCONJ 0 1/4
+txw 1 3 txw txw 0 3/4 PASS gram GRAM_GLOSS -1 -2
+'y 2 2 'y 'y 0 3/4 1SG.II gram GRAM_GLOSS -1 -2
+diya F 4 diy iya 0 4/4 QUOT.3SG gram GRAM_GLOSS -1 -2
+
+dim F 3 dim dim 0 1/4 PROSP gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+gipaykw 0 6+ gip ykw 0 1/4 fly lex DET 0 1/4
+hl 1 2 hl hl 0 2/4 CN gram GRAM_GLOSS -1 -2
+bisde'y F 6+ bis e'y 0 2/4 grouse lex NOUN 0 1/4
+dim F 3 dim dim 0 2/4 PROSP gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 3/4 CCNJ gram GRAM_GLOSS -1 -2
+huut 0 4 huu uut 0 3/4 flee.PL lex AUX 0 1/4
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+x̲adaa F 6+ x̲a daa 0 4/4 moose lex VERB 0 1/4
+hasak̲ 0 6+ has ak̲ 0 4/4 want lex ADV 0 2/4
+'y 1 2 'y 'y 0 4/4 1SG.II gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+'nii F 4 'ni nii 0 1/4 on lex CCONJ 0 1/4
+win F 3 win win 0 1/4 COMP gram GRAM_GLOSS -1 -2
+nee 0 3 nee nee 0 2/4 NEG gram GRAM_GLOSS -1 -2
+dii 1 3 dii dii 0 2/4 FOC gram GRAM_GLOSS -1 -2
+x̲s 0 3 x̲s x̲s 0 3/4 SUPER gram GRAM_GLOSS -1 -2
+del 1 3 del del 0 3/4 make.noise lex ? 0 -1
+txw 2 3 txw txw 0 3/4 PASS gram GRAM_GLOSS -1 -2
+s 3 1 s s 0 4/4 PN gram GRAM_GLOSS -1 -2
+Man F 3 Man Man 1 4/4 Man lex PART 1 2/4
+
+disim F 5 dis sim 0 1/4 keep.on lex ? 0 -1
+t'aa F 4 t'a 'aa 0 1/4 sit lex ADV 0 1/4
+'nit F 4 'ni nit 0 1/4 3.III gram GRAM_GLOSS -1 -2
+gya'a 0 5 gya a'a 0 1/4 see lex PRON 0 1/4
+t 1 1 t t 0 1/4 3.II gram GRAM_GLOSS -1 -2
+'nuu'm F 6+ 'nu u'm 0 2/4 1PL.III gram GRAM_GLOSS -1 -2
+gya'a 0 5 gya a'a 0 2/4 see lex VERB 0 1/4
+t 1 1 t t 0 2/4 3.II gram GRAM_GLOSS -1 -2
+wila F 4 wil ila 0 2/4 MANR gram GRAM_GLOSS -1 -2
+jep 0 3 jep jep 0 3/4 make lex ADP 0 2/4
+t 1 1 t t 0 3/4 T gram GRAM_GLOSS -1 -2
+i 2 1 i i 0 3/4 TR gram GRAM_GLOSS -1 -2
+'m 3 2 'm 'm 0 3/4 1PL.II gram GRAM_GLOSS -1 -2
+gya'a 0 5 gya a'a 0 3/4 see lex PRON 0 2/4
+t 1 1 t t 0 4/4 3.II gram GRAM_GLOSS -1 -2
+wila F 4 wil ila 0 4/4 MANR gram GRAM_GLOSS -1 -2
+wil 0 3 wil wil 0 4/4 LVB gram GRAM_GLOSS -1 -2
+'y 1 2 'y 'y 0 4/4 1SG.II gram GRAM_GLOSS -1 -2
+
+ii 0 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+n 1 1 n n 0 1/4 1.I gram GRAM_GLOSS -1 -2
+dip F 3 dip dip 0 2/4 1PL.I gram GRAM_GLOSS -1 -2
+gidax̲ F 6+ gid ax̲ 0 2/4 ask lex CCONJ 0 1/4
+gu 0 2 gu gu 0 3/4 what lex PRON 0 1/4
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+wil 0 3 wil wil 0 4/4 LVB gram GRAM_GLOSS -1 -2
+t 1 1 t t 0 4/4 3.II gram GRAM_GLOSS -1 -2
+
+gu 0 2 gu gu 0 1/4 what lex PRON 0 1/4
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+g̲ay F 4 g̲a ̲ay 0 1/4 CONTR gram GRAM_GLOSS -1 -2
+guxw 0 4 gux uxw 0 2/4 shoot lex AUX 0 1/4
+i 1 1 i i 0 2/4 TR gram GRAM_GLOSS -1 -2
+n 2 1 n n 0 3/4 2SG.II gram GRAM_GLOSS -1 -2
+bisde'y F 6+ bis e'y 0 3/4 grouse lex PRON 0 1/4
+ji F 2 ji ji 0 3/4 IRR gram GRAM_GLOSS -1 -2
+ligi F 4 lig igi 0 4/4 DWID gram GRAM_GLOSS -1 -2
+x̲adaa F 6+ x̲a daa 0 4/4 moose lex VERB 0 2/4
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+'nii F 4 'ni nii 0 1/4 on lex CCONJ 0 1/4
+win F 3 win win 0 2/4 COMP gram GRAM_GLOSS -1 -2
+t'aa 0 4 t'a 'aa 0 3/4 sit lex ADV 0 1/4
+t 1 1 t t 0 4/4 3.II gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+he 0 2 he he 1 1/4 say lex CCONJ 0 1/4
+t 1 1 t t 0 2/4 3.II gram GRAM_GLOSS -1 -2
+ji 0 2 ji ji 0 2/4 IRR gram GRAM_GLOSS -1 -2
+da 1 2 da da 0 3/4 SPT gram GRAM_GLOSS -1 -2
+n F 1 n n 0 3/4 1.I gram GRAM_GLOSS -1 -2
+guxw F 4 gux uxw 0 4/4 shoot lex PRON 0 1/4
+bisde'y F 6+ bis e'y 0 4/4 grouse lex VERB 0 2/4
+
+ji 0 2 ji ji 0 1/4 IRR gram GRAM_GLOSS -1 -2
+da 1 2 da da 0 1/4 SPT gram GRAM_GLOSS -1 -2
+n F 1 n n 0 1/4 1.I gram GRAM_GLOSS -1 -2
+guxw F 4 gux uxw 0 1/4 shoot lex SCONJ 0 1/4
+bisde'y F 6+ bis e'y 0 2/4 grouse lex PRON 0 1/4
+dim F 3 dim dim 0 2/4 PROSP gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 2/4 CCNJ gram GRAM_GLOSS -1 -2
+k̲'am F 5 k̲' 'am 0 3/4 only lex VERB 0 1/4
+ky'ul F 5 ky' 'ul 0 3/4 one.HUM lex DET 0 1/4
+'nii'y F 6+ 'ni i'y 0 3/4 1SG.III gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 3/4 PROSP gram GRAM_GLOSS -1 -2
+yook̲ 0 5 yoo ok̲ 0 4/4 eat lex NOUN 0 2/4
+xw 1 2 xw xw 0 4/4 PASS gram GRAM_GLOSS -1 -2
+it 2 2 it it 0 4/4 SX gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+ji 0 2 ji ji 0 1/4 IRR gram GRAM_GLOSS -1 -2
+da 1 2 da da 0 1/4 SPT gram GRAM_GLOSS -1 -2
+gibee 0 5 gib bee 0 1/4 wait lex CCONJ 0 1/4
+'esxw 1 5 'es sxw 0 2/4 ANTIP gram GRAM_GLOSS -1 -2
+'y 2 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+wag̲ayt F 6+ wag ayt 0 2/4 completely lex SCONJ 0 1/4
+dim F 3 dim dim 0 3/4 PROSP gram GRAM_GLOSS -1 -2
+an F 2 an an 0 3/4 NMLZ gram GRAM_GLOSS -1 -2
+suwi F 4 suw uwi 0 3/4 away lex PRON 0 1/4
+yee 0 3 yee yee 0 4/4 go lex VERB 0 2/4
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+bisde'y F 6+ bis e'y 0 4/4 grouse lex SCONJ 0 2/4
+
+dim F 3 dim dim 0 1/4 PROSP gram GRAM_GLOSS -1 -2
+ii 0 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+n 1 1 n n 0 1/4 1.I gram GRAM_GLOSS -1 -2
+da'ak̲hlxw F 6+ da' lxw 0 1/4 CIRC.PSBL gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 1/4 PROSP gram GRAM_GLOSS -1 -2
+hogwin F 6+ hog win 0 2/4 toward lex ADV 0 1/4
+yee F 3 yee yee 0 2/4 go lex PRON 0 1/4
+g̲a'a 0 5 g̲a a'a 0 2/4 LOC gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 2/4 CN gram GRAM_GLOSS -1 -2
+ts'uusk 0 6+ ts' usk 0 2/4 little lex AUX 0 1/4
+m 1 1 m m 0 3/4 ATTR gram GRAM_GLOSS -1 -2
+hogwin F 6+ hog win 0 3/4 toward lex AUX 0 1/4
+dulp 0 4 dul ulp 0 3/4 close lex ADJ 0 2/4
+in 1 2 in in 0 3/4 CAUS2 gram GRAM_GLOSS -1 -2
+sxw 2 3 sxw sxw 0 3/4 ANTIP gram GRAM_GLOSS -1 -2
+'y 3 2 'y 'y 0 4/4 1SG.II gram GRAM_GLOSS -1 -2
+g̲a'a 0 5 g̲a a'a 0 4/4 LOC gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+x̲adaa F 6+ x̲a daa 0 4/4 moose lex PART 0 2/4
+
+dim F 3 dim dim 0 1/4 PROSP gram GRAM_GLOSS -1 -2
+ii 0 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+n 1 1 n n 0 1/4 1.I gram GRAM_GLOSS -1 -2
+da'ak̲hlxw F 6+ da' lxw 0 1/4 CIRC.PSBL gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 1/4 PROSP gram GRAM_GLOSS -1 -2
+n F 1 n n 0 2/4 1.I gram GRAM_GLOSS -1 -2
+guxw 0 4 gux uxw 0 2/4 shoot lex CCONJ 0 1/4
+t 1 1 t t 0 2/4 3.II gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 2/4 PROSP gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 3/4 CCNJ gram GRAM_GLOSS -1 -2
+tx̲ook̲ 0 6+ tx̲ ok̲ 0 3/4 eat.PL lex ADV 0 1/4
+xw 1 2 xw xw 0 3/4 PASS gram GRAM_GLOSS -1 -2
+hl 2 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+walk̲'a F 6+ wal ̲'a 0 4/4 all lex PRON 0 1/4
+'nit 0 4 'ni nit 0 4/4 3.III gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+gyet F 4 gye yet 0 4/4 people lex AUX 0 1/4
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+'nii F 4 'ni nii 0 1/4 on lex SCONJ 0 1/4
+win F 3 win win 0 1/4 COMP gram GRAM_GLOSS -1 -2
+hlis 0 4 hli lis 0 1/4 finish lex PRON 0 1/4
+xw 1 2 xw xw 0 2/4 PASS gram GRAM_GLOSS -1 -2
+t 2 1 t t 0 2/4 3.I gram GRAM_GLOSS -1 -2
+mehl 0 4 meh ehl 0 2/4 tell lex VERB 0 2/4
+i 1 1 i i 0 2/4 T gram GRAM_GLOSS -1 -2
+t 2 1 t t 0 3/4 3.II gram GRAM_GLOSS -1 -2
+loo 0 3 loo loo 0 3/4 OBL gram GRAM_GLOSS -1 -2
+'m 1 2 'm 'm 0 3/4 1PL.II gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 3/4 CCNJ gram GRAM_GLOSS -1 -2
+daa'whl F 6+ daa whl 0 4/4 leave lex VERB 0 2/4
+ha'w 0 4 ha' a'w 0 4/4 go.home lex ? 0 -1
+t 1 1 t t 0 4/4 3.II gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+hlaa F 4 hla laa 0 1/4 INCEP gram GRAM_GLOSS -1 -2
+gilbil F 6+ gil bil 0 1/4 two lex CCONJ 0 1/4
+sa F 2 sa sa 0 1/4 day lex ADV 0 1/4
+hlis 0 4 hli lis 0 1/4 finish lex SCONJ 0 1/4
+it 1 2 it it 0 2/4 SX gram GRAM_GLOSS -1 -2
+saa F 3 saa saa 0 2/4 away lex NUM 0 2/4
+daa'whl 0 6+ daa whl 0 2/4 leave lex NOUN 0 2/4
+it 1 2 it it 0 2/4 SX gram GRAM_GLOSS -1 -2
+dis F 3 dis dis 0 3/4 time lex AUX 0 2/4
+wil 0 3 wil wil 0 3/4 COMP gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+n F 1 n n 0 3/4 1.I gram GRAM_GLOSS -1 -2
+heksim 0 6+ hek sim 0 4/4 just lex VERB 0 3/4
+hox̲ 1 4 hox ox̲ 0 4/4 again lex PRON 0 3/4
+gya'a 0 5 gya a'a 0 4/4 see lex VERB 0 3/4
+t 1 1 t t 0 4/4 3.II gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+hugwin F 6+ hug win 0 1/4 toward lex CCONJ 0 1/4
+bax̲ 0 4 bax ax̲ 0 1/4 run lex PRON 0 1/4
+'y 1 2 'y 'y 0 1/4 1SG.II gram GRAM_GLOSS -1 -2
+g̲o'o 0 5 g̲o o'o 0 2/4 LOC gram GRAM_GLOSS -1 -2
+t 1 1 t t 0 2/4 3.II gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 2/4 CCNJ gram GRAM_GLOSS -1 -2
+'nii F 4 'ni nii 0 3/4 on lex VERB 0 1/4
+win F 3 win win 0 3/4 COMP gram GRAM_GLOSS -1 -2
+he 0 2 he he 0 3/4 say lex ADP 0 2/4
+'y 1 2 'y 'y 0 4/4 1SG.II gram GRAM_GLOSS -1 -2
+loo 0 3 loo loo 0 4/4 OBL gram GRAM_GLOSS -1 -2
+t 1 1 t t 0 4/4 3.II gram GRAM_GLOSS -1 -2
+
+nee 0 3 nee nee 0 1/4 NEG gram GRAM_GLOSS -1 -2
+m 1 1 m m 0 1/4 2.I gram GRAM_GLOSS -1 -2
+da'ak̲hlxw F 6+ da' lxw 0 1/4 CIRC.PSBL gram GRAM_GLOSS -1 -2
+dim 0 3 dim dim 0 1/4 PROSP gram GRAM_GLOSS -1 -2
+ma 1 2 ma ma 0 2/4 2.I gram GRAM_GLOSS -1 -2
+mehl 0 4 meh ehl 0 2/4 tell lex AUX 0 1/4
+i 1 1 i i 0 2/4 T gram GRAM_GLOSS -1 -2
+hl 2 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+wila F 4 wil ila 0 3/4 MANR gram GRAM_GLOSS -1 -2
+wil 0 3 wil wil 0 3/4 LVB gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+bisde'y F 6+ bis e'y 0 4/4 grouse lex PRON 0 1/4
+gi F 2 gi gi 0 4/4 PR.EVID gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+'nii F 4 'ni nii 0 1/4 on lex CCONJ 0 1/4
+win F 3 win win 0 1/4 COMP gram GRAM_GLOSS -1 -2
+he 0 2 he he 1 1/4 say lex ADV 0 1/4
+t 1 1 t t 0 1/4 3.II gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 1/4 PROSP gram GRAM_GLOSS -1 -2
+hogwin F 6+ hog win 0 2/4 toward lex PRON 0 1/4
+kw'itxw F 6+ kw' txw 0 2/4 arrive lex VERB 0 1/4
+'nii'y F 6+ 'ni i'y 0 2/4 1SG.III gram GRAM_GLOSS -1 -2
+g̲a'a 0 5 g̲a a'a 0 2/4 LOC gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 2/4 CN gram GRAM_GLOSS -1 -2
+wilp 0 4 wil ilp 0 2/4 house lex PRON 0 1/4
+s 1 1 s s 0 3/4 PN gram GRAM_GLOSS -1 -2
+nox̲ 0 4 nox ox̲ 0 3/4 mother lex AUX 0 2/4
+n 1 1 n n 0 3/4 2SG.II gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 3/4 PROSP gram GRAM_GLOSS -1 -2
+ii 0 2 ii ii 0 3/4 CCNJ gram GRAM_GLOSS -1 -2
+n 1 1 n n 0 3/4 1.I gram GRAM_GLOSS -1 -2
+mehl 0 4 meh ehl 0 4/4 tell lex AUX 0 2/4
+i 1 1 i i 1 4/4 T gram GRAM_GLOSS -1 -2
+t 2 1 t t 0 4/4 3.II gram GRAM_GLOSS -1 -2
+loo 0 3 loo loo 0 4/4 OBL gram GRAM_GLOSS -1 -2
+n 1 1 n n 0 4/4 2SG.II gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+gukws F 5 guk kws 0 1/4 back lex CCONJ 0 1/4
+ha'w 0 4 ha' a'w 0 1/4 go.home lex ? 0 -1
+'y 1 2 'y 'y 0 1/4 1SG.II gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+n F 1 n n 0 2/4 1.I gram GRAM_GLOSS -1 -2
+gibe 0 4 gib ibe 0 2/4 wait lex ADV 0 1/4
+'esxw 1 5 'es sxw 0 2/4 ANTIP gram GRAM_GLOSS -1 -2
+'y 2 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+loo 0 3 loo loo 0 2/4 OBL gram GRAM_GLOSS -1 -2
+t 1 1 t t 0 3/4 3.II gram GRAM_GLOSS -1 -2
+ii 0 2 ii ii 0 3/4 CCNJ gram GRAM_GLOSS -1 -2
+t 1 1 t t 0 3/4 3.I gram GRAM_GLOSS -1 -2
+mehl 0 4 meh ehl 0 3/4 tell lex CCONJ 0 2/4
+i 1 1 i i 1 3/4 T gram GRAM_GLOSS -1 -2
+hl 2 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+wila F 4 wil ila 0 4/4 MANR gram GRAM_GLOSS -1 -2
+wil 0 3 wil wil 0 4/4 LVB gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+bisde'y F 6+ bis e'y 0 4/4 grouse lex VERB 0 2/4
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+yukw 0 4 yuk ukw 0 1/4 IPFV gram GRAM_GLOSS -1 -2
+t 1 1 t t 0 1/4 3.I gram GRAM_GLOSS -1 -2
+mehl 0 4 meh ehl 0 2/4 tell lex PUNCT 0 1/4
+i 1 1 i i 0 2/4 T gram GRAM_GLOSS -1 -2
+t 2 1 t t 0 2/4 3.II gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 3/4 CCNJ gram GRAM_GLOSS -1 -2
+'nii F 4 'ni nii 0 3/4 on lex CCONJ 0 1/4
+win F 3 win win 0 3/4 COMP gram GRAM_GLOSS -1 -2
+he 0 2 he he 1 4/4 say lex SCONJ 0 1/4
+t 1 1 t t 0 4/4 3.II gram GRAM_GLOSS -1 -2
+
+yukw 0 4 yuk ukw 0 1/4 IPFV gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+silin 0 5 sil lin 0 1/4 hunt lex PRON 0 1/4
+asxw 1 4 asx sxw 0 2/4 ANTIP gram GRAM_GLOSS -1 -2
+'y 2 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 2/4 CCNJ gram GRAM_GLOSS -1 -2
+hasak̲ 0 6+ has ak̲ 0 3/4 want lex AUX 0 1/4
+'m 1 2 'm 'm 0 3/4 1PL.II gram GRAM_GLOSS -1 -2
+a 0 1 a a 0 3/4 PREP gram GRAM_GLOSS -1 -2
+loo 1 3 loo loo 0 4/4 OBL gram GRAM_GLOSS -1 -2
+hl 2 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+x̲adaa F 6+ x̲a daa 0 4/4 moose lex VERB 0 1/4
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+hasak̲ 0 6+ has ak̲ 0 1/4 want lex CCONJ 0 1/4
+'m 1 2 'm 'm 0 1/4 1PL.II gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 1/4 PROSP gram GRAM_GLOSS -1 -2
+tx̲ook 0 6+ tx̲ ook 0 2/4 eat lex PRON 0 1/4
+in 1 2 in in 1 2/4 CAUS2 gram GRAM_GLOSS -1 -2
+walk̲'a F 6+ wal ̲'a 0 2/4 all lex VERB 0 1/4
+'nit 0 4 'ni nit 0 2/4 3.III gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+gyet F 4 gye yet 0 3/4 people lex PART 0 1/4
+ii F 2 ii ii 0 3/4 CCNJ gram GRAM_GLOSS -1 -2
+sg̲a F 4 sg̲ g̲a 0 3/4 block.way lex ? 0 -1
+t'aa 0 4 t'a 'aa 0 4/4 sit lex DET 0 2/4
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+bisde'y F 6+ bis e'y 0 4/4 grouse lex NOUN 0 2/4
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+ji 0 2 ji ji 0 1/4 IRR gram GRAM_GLOSS -1 -2
+da 1 2 da da 0 1/4 SPT gram GRAM_GLOSS -1 -2
+hlen 0 4 hle len 0 2/4 move lex SCONJ 0 1/4
+txw 1 3 txw txw 0 2/4 PASS gram GRAM_GLOSS -1 -2
+'y 2 2 'y 'y 0 3/4 1SG.II gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 3/4 PROSP gram GRAM_GLOSS -1 -2
+ii F 2 ii ii 0 3/4 CCNJ gram GRAM_GLOSS -1 -2
+gipaykw F 6+ gip ykw 0 4/4 fly lex PRON 0 1/4
+bisde'y F 6+ bis e'y 0 4/4 grouse lex VERB 0 2/4
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+'nii F 4 'ni nii 0 1/4 on lex NOUN 0 1/4
+win F 3 win win 0 1/4 COMP gram GRAM_GLOSS -1 -2
+he 0 2 he he 0 1/4 say lex VERB 0 1/4
+s 1 1 s s 0 2/4 PN gram GRAM_GLOSS -1 -2
+Man F 3 Man Man 1 2/4 Man lex SCONJ 1 1/4
+betl'a F 6+ bet l'a 1 2/4 flap lex DET 0 1/4
+betl'a F 6+ bet l'a 1 2/4 flap lex NOUN 0 1/4
+betl'a F 6+ bet l'a 1 3/4 flap lex VERB 0 2/4
+betl' F 5 bet tl' 0 3/4 flap lex PART 0 2/4
+diya F 4 diy iya 0 3/4 QUOT.3SG gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 3/4 PROSP gram GRAM_GLOSS -1 -2
+wila F 4 wil ila 0 4/4 MANR gram GRAM_GLOSS -1 -2
+gipaykw 0 6+ gip ykw 0 4/4 fly lex VERB 0 2/4
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+bisde'y F 6+ bis e'y 0 4/4 grouse lex CCONJ 0 2/4
+
+sim F 3 sim sim 0 1/4 true lex ADV 0 1/4
+'nii F 4 'ni nii 0 1/4 on lex ADV 0 1/4
+win F 3 win win 0 1/4 COMP gram GRAM_GLOSS -1 -2
+hlen 0 4 hle len 0 1/4 move lex SCONJ 0 1/4
+txw 1 3 txw txw 0 1/4 PASS gram GRAM_GLOSS -1 -2
+'y 2 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+diya F 4 diy iya 0 2/4 QUOT.3SG gram GRAM_GLOSS -1 -2
+sim F 3 sim sim 0 2/4 true lex PRON 0 1/4
+'nii F 4 'ni nii 0 2/4 on lex VERB 0 2/4
+win F 3 win win 0 3/4 COMP gram GRAM_GLOSS -1 -2
+hlen 0 4 hle len 0 3/4 move lex PRON 0 2/4
+txw 1 3 txw txw 0 3/4 PASS gram GRAM_GLOSS -1 -2
+'y 2 2 'y 'y 0 3/4 1SG.II gram GRAM_GLOSS -1 -2
+kw'es 0 5 kw' 'es 0 3/4 break lex VERB 0 2/4
+in 1 2 in in 0 4/4 CAUS2 gram GRAM_GLOSS -1 -2
+'y 2 2 'y 'y 0 4/4 1SG.II gram GRAM_GLOSS -1 -2
+hl 3 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+g̲an F 4 g̲a ̲an 0 4/4 stick lex ADV 0 2/4
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+ts'eek̲xw 0 6+ ts' ̲xw 0 1/4 noisy lex PRON 0 1/4
+hl 1 2 hl hl 0 1/4 CN gram GRAM_GLOSS -1 -2
+win 0 3 win win 0 1/4 COMP gram GRAM_GLOSS -1 -2
+dii 1 3 dii dii 0 1/4 FOC gram GRAM_GLOSS -1 -2
+t 2 1 t t 0 1/4 3.I gram GRAM_GLOSS -1 -2
+liipaykw 0 6+ lii ykw 0 2/4 fly.PL lex AUX 0 1/4
+hl 1 2 hl hl 0 2/4 CN gram GRAM_GLOSS -1 -2
+bisde'y F 6+ bis e'y 0 2/4 grouse lex ADV 0 1/4
+ii F 2 ii ii 0 2/4 CCNJ gram GRAM_GLOSS -1 -2
+'nii F 4 'ni nii 0 2/4 on lex SCONJ 0 1/4
+win F 3 win win 0 2/4 COMP gram GRAM_GLOSS -1 -2
+gipaykw 0 6+ gip ykw 0 3/4 fly lex DET 0 1/4
+diit 1 4 dii iit 0 3/4 3PL.II gram GRAM_GLOSS -1 -2
+ii 0 2 ii ii 0 3/4 CCNJ gram GRAM_GLOSS -1 -2
+ma 1 2 ma ma 0 3/4 2.I gram GRAM_GLOSS -1 -2
+x̲a'ni 0 6+ x̲a 'ni 0 3/4 hear lex NOUN 0 1/4
+t 1 1 t t 0 3/4 3.II gram GRAM_GLOSS -1 -2
+betl'a F 6+ bet l'a 1 4/4 flap lex VERB 0 1/4
+betl'a F 6+ bet l'a 1 4/4 flap lex CCONJ 0 1/4
+betl'a F 6+ bet l'a 1 4/4 flap lex PRON 0 1/4
+betl'a F 6+ bet l'a 1 4/4 flap lex AUX 0 1/4
+betl' F 5 bet tl' 0 4/4 flap lex VERB 0 1/4
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+nee 0 3 nee nee 0 1/4 NEG gram GRAM_GLOSS -1 -2
+dii 1 3 dii dii 0 1/4 FOC gram GRAM_GLOSS -1 -2
+hasak̲ 0 6+ has ak̲ 0 1/4 want lex ADV 0 1/4
+'y 1 2 'y 'y 0 1/4 1SG.II gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 1/4 PROSP gram GRAM_GLOSS -1 -2
+an F 2 an an 0 2/4 NMLZ gram GRAM_GLOSS -1 -2
+hlen 0 4 hle len 0 2/4 move lex PRON 0 1/4
+txw 1 3 txw txw 0 2/4 PASS gram GRAM_GLOSS -1 -2
+'y 2 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+dim F 3 dim dim 0 2/4 PROSP gram GRAM_GLOSS -1 -2
+wila F 4 wil ila 0 2/4 MANR gram GRAM_GLOSS -1 -2
+huut 0 4 huu uut 0 3/4 flee.PL lex AUX 0 1/4
+hl 1 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+x̲adaa F 6+ x̲a daa 0 3/4 moose lex PART 0 1/4
+siilin 0 6+ sii lin 0 3/4 hunt lex VERB 0 1/4
+asxw 1 4 asx sxw 0 3/4 ANTIP gram GRAM_GLOSS -1 -2
+'y 2 2 'y 'y 0 3/4 1SG.II gram GRAM_GLOSS -1 -2
+win F 3 win win 0 4/4 COMP gram GRAM_GLOSS -1 -2
+sg̲a F 4 sg̲ g̲a 0 4/4 block.way lex ? 0 -1
+t'aa 0 4 t'a 'aa 0 4/4 sit lex SCONJ 0 2/4
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+bisde'y F 6+ bis e'y 0 4/4 grouse lex SCONJ 0 2/4
+
+win 0 3 win win 0 1/4 COMP gram GRAM_GLOSS -1 -2
+na 1 2 na na 0 1/4 1.I gram GRAM_GLOSS -1 -2
+k'uxw F 5 k'u uxw 0 1/4 HAB gram GRAM_GLOSS -1 -2
+gya'a 0 5 gya a'a 0 1/4 see lex DET 0 1/4
+s 1 1 s s 0 1/4 PN gram GRAM_GLOSS -1 -2
+Man F 3 Man Man 1 1/4 Man lex NOUN 1 1/4
+Jacob F 5 Jac cob 0 1/4 Jacob lex PRON 1 1/4
+Brown F 5 Bro own 0 1/4 Brown lex VERB 1 1/4
+ii F 2 ii ii 0 2/4 CCNJ gram GRAM_GLOSS -1 -2
+n F 1 n n 0 2/4 1.I gram GRAM_GLOSS -1 -2
+hox̲ F 4 hox ox̲ 0 2/4 again lex INTJ 0 1/4
+gidax̲ 0 6+ gid ax̲ 0 2/4 ask lex PRON 0 2/4
+t 1 1 t t 0 2/4 3.II gram GRAM_GLOSS -1 -2
+nee 0 3 nee nee 0 2/4 NEG gram GRAM_GLOSS -1 -2
+m 1 1 m m 0 2/4 2.I gram GRAM_GLOSS -1 -2
+da'ak̲hlxw F 6+ da' lxw 0 3/4 CIRC.PSBL gram GRAM_GLOSS -1 -2
+dim 0 3 dim dim 0 3/4 PROSP gram GRAM_GLOSS -1 -2
+ma 1 2 ma ma 0 3/4 2.I gram GRAM_GLOSS -1 -2
+mehl 0 4 meh ehl 0 3/4 tell lex VERB 0 2/4
+i 1 1 i i 1 3/4 T gram GRAM_GLOSS -1 -2
+hl 2 2 hl hl 0 3/4 CN gram GRAM_GLOSS -1 -2
+wila F 4 wil ila 0 3/4 MANR gram GRAM_GLOSS -1 -2
+wil 0 3 wil wil 0 4/4 LVB gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 4/4 CN gram GRAM_GLOSS -1 -2
+betl'a F 6+ bet l'a 1 4/4 flap lex PRON 0 2/4
+betl' F 5 bet tl' 0 4/4 flap lex AUX 0 2/4
+loo 0 3 loo loo 0 4/4 OBL gram GRAM_GLOSS -1 -2
+'m 1 2 'm 'm 0 4/4 1PL.II gram GRAM_GLOSS -1 -2
+aa 2 2 aa aa 0 4/4 Q gram GRAM_GLOSS -1 -2
+
+ii F 2 ii ii 0 1/4 CCNJ gram GRAM_GLOSS -1 -2
+'nii F 4 'ni nii 0 1/4 on lex PRON 0 1/4
+win F 3 win win 0 1/4 COMP gram GRAM_GLOSS -1 -2
+si 0 2 si si 0 1/4 CAUS1 gram GRAM_GLOSS -1 -2
+t'aa 1 4 t'a 'aa 0 2/4 sit lex AUX 0 1/4
+'ma 2 3 'ma 'ma 0 2/4 DETR gram GRAM_GLOSS -1 -2
+m 3 1 m m 0 2/4 ATTR gram GRAM_GLOSS -1 -2
+si 0 2 si si 0 2/4 CAUS1 gram GRAM_GLOSS -1 -2
+we 1 2 we we 0 3/4 name lex SCONJ 0 1/4
+t 2 1 t t 0 3/4 T gram GRAM_GLOSS -1 -2
+i 3 1 i i 0 3/4 TR gram GRAM_GLOSS -1 -2
+'y 4 2 'y 'y 0 3/4 1SG.II gram GRAM_GLOSS -1 -2
+t 5 1 t t 0 4/4 DM gram GRAM_GLOSS -1 -2
+Man F 3 Man Man 1 4/4 Man lex NOUN 1 2/4
+Betl'a F 6+ Bet l'a 1 4/4 Betl'a lex VERB 1 2/4
+Betl' F 5 Bet tl' 0 4/4 Betl' lex PRON 1 3/4
+
+'nii F 4 'ni nii 0 1/4 on lex PRON 0 1/4
+g̲an F 4 g̲a ̲an 0 1/4 REAS gram GRAM_GLOSS -1 -2
+wil 0 3 wil wil 0 1/4 COMP gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 2/4 CN gram GRAM_GLOSS -1 -2
+we 0 2 we we 0 2/4 name lex AUX 0 1/4
+'y 1 2 'y 'y 0 2/4 1SG.II gram GRAM_GLOSS -1 -2
+gyuu'n F 6+ gyu u'n 0 3/4 now lex SCONJ 0 1/4
+a 0 1 a a 0 3/4 PREP gram GRAM_GLOSS -1 -2
+s 1 1 s s 0 3/4 PN gram GRAM_GLOSS -1 -2
+Betl'a F 6+ Bet l'a 1 4/4 Betl'a lex PRON 1 2/4
+Betl' F 5 Bet tl' 0 4/4 Betl' lex AUX 1 2/4
+
+g̲abii 0 6+ g̲a bii 0 1/4 CNT.AMT gram GRAM_GLOSS -1 -2
+hl 1 2 hl hl 0 2/4 CN gram GRAM_GLOSS -1 -2
+he 0 2 he he 0 3/4 say lex PRON 0 1/4
+'y 1 2 'y 'y 0 4/4 1SG.II gram GRAM_GLOSS -1 -2
+
+dim F 3 dim dim 0 1/4
+mehl 0 4 meh ehl 0 1/4
+d 1 1 d d 0 1/4
+i 2 1 i i 1 1/4
+'y 3 2 'y 'y 0 1/4
+wila F 4 wil ila 0 1/4
+wil 0 3 wil wil 0 2/4
+hl 1 2 hl hl 0 2/4
+win F 3 win win 0 2/4
+ksi F 3 ksi ksi 0 2/4
+hogwin F 6+ hog win 0 2/4
+bakw 0 4 bak akw 0 2/4
+hl 1 2 hl hl 0 3/4
+mis 0 3 mis mis 0 3/4
+maaxwsxw 1 6+ maa sxw 0 3/4
+m 2 1 m m 0 3/4
+gyet F 4 gye yet 0 3/4
+g̲o'o 0 5 g̲o o'o 0 3/4
+hl 1 2 hl hl 0 4/4
+ts'ep 0 5 ts' 'ep 0 4/4
+'m 1 2 'm 'm 0 4/4
+gitwinhlguu'l F 6+ git u'l 0 4/4
+gik'uuhl F 6+ gik uhl 0 4/4
+
+ha'wen 0 6+ ha' wen 0 1/4
+dii 1 3 dii dii 0 1/4
+'nakw F 5 'na akw 0 1/4
+hli 0 3 hli hli 0 1/4
+da 1 2 da da 0 1/4
+bakw 0 4 bak akw 0 1/4
+hl 1 2 hl hl 0 2/4
+gyet F 4 gye yet 0 2/4
+dip 0 3 dip dip 0 2/4
+xwin 1 4 xwi win 0 2/4
+ii F 2 ii ii 0 2/4
+sag̲ayt 0 6+ sag ayt 0 3/4
+g̲oot 1 5 g̲o oot 0 3/4
+in 2 2 in in 0 3/4
+diit 3 4 dii iit 0 3/4
+hl 4 2 hl hl 0 3/4
+hli F 3 hli hli 0 4/4
+gyet 0 4 gye yet 0 4/4
+i 1 1 i i 0 4/4
+hl 2 2 hl hl 0 4/4
+gitwinhlguu'l F 6+ git u'l 0 4/4
+
+hasak̲ 0 6+ has ak̲ 0 1/4
+diit 1 4 dii iit 0 1/4
+dim F 3 dim dim 0 1/4
+mehl 0 4 meh ehl 0 1/4
+diit 1 4 dii iit 0 1/4
+win F 3 win win 0 1/4
+hlaa F 4 hla laa 0 2/4
+dim F 3 dim dim 0 2/4
+sii F 3 sii sii 0 2/4
+ha 0 2 ha ha 0 2/4
+'nii 1 4 'ni nii 0 2/4
+jok̲ 2 4 jok ok̲ 0 3/4
+t 3 1 t t 0 3/4
+g̲o'o 0 5 g̲o o'o 0 3/4
+hl 1 2 hl hl 0 3/4
+win F 3 win win 0 3/4
+t'aa 0 4 t'a 'aa 0 4/4
+hl 1 2 hl hl 0 4/4
+g̲alts'ep 0 6+ g̲a 'ep 0 4/4
+hl 1 2 hl hl 0 4/4
+Gitwinhlguu'l F 6+ Git u'l 0 4/4
+
+'nit F 4 'ni nit 0 1/4
+sa 0 2 sa sa 0 1/4
+g̲oot 1 5 g̲o oot 0 1/4
+xw 2 2 xw xw 0 1/4
+hl 3 2 hl hl 0 1/4
+government F 6+ gov ent 1 1/4
+si 0 2 si si 0 1/4
+we 1 2 we we 0 1/4
+t 2 1 t t 0 2/4
+diit 3 4 dii iit 0 2/4
+ii F 2 ii ii 0 2/4
+dim F 3 dim dim 0 2/4
+'nii F 4 'ni nii 0 2/4
+wen 0 3 wen wen 0 2/4
+hl 1 2 hl hl 0 2/4
+dim F 3 dim dim 0 3/4
+jok̲ 0 4 jok ok̲ 0 3/4
+hl 1 2 hl hl 0 3/4
+aluu 0 4 alu luu 0 3/4
+gi 1 2 gi gi 0 3/4
+gyet 2 4 gye yet 0 3/4
+g̲o'o 0 5 g̲o o'o 0 3/4
+hl 1 2 hl hl 0 4/4
+lax̲ F 4 lax ax̲ 0 4/4
+reserve F 6+ res rve 1 4/4
+si 0 2 si si 0 4/4
+we 1 2 we we 0 4/4
+t 2 1 t t 0 4/4
+diit 3 4 dii iit 0 4/4
+
+gu F 2 gu gu 0 1/4
+g̲an 0 4 g̲a ̲an 0 1/4
+wil 1 3 wil wil 0 1/4
+t 2 1 t t 0 1/4
+diye 0 4 diy iye 0 1/4
+hl 1 2 hl hl 0 1/4
+hli F 3 hli hli 0 2/4
+gyet 0 4 gye yet 0 2/4
+i 1 1 i i 0 2/4
+hl 2 2 hl hl 0 2/4
+Gitwinhlguu'l F 6+ Git u'l 0 2/4
+e 0 1 e e 0 2/4
+hl 1 2 hl hl 0 3/4
+'nii F 4 'ni nii 0 3/4
+jok̲ 0 4 jok ok̲ 0 3/4
+'m 1 2 'm 'm 0 3/4
+g̲o'o 0 5 g̲o o'o 0 3/4
+hl 1 2 hl hl 0 3/4
+lax̲yip 0 6+ lax yip 0 4/4
+'m 1 2 'm 'm 0 4/4
+g̲o'o 0 5 g̲o o'o 0 4/4
+s 1 1 s s 0 4/4
+xwin 2 4 xwi win 0 4/4
+
+ii F 2 ii ii 0 1/4
+nax̲'ni 0 6+ nax 'ni 0 1/4
+diit 1 4 dii iit 0 1/4
+win F 3 win win 0 1/4
+dim F 3 dim dim 0 2/4
+bakw 0 4 bak akw 0 2/4
+hl 1 2 hl hl 0 2/4
+si 0 2 si si 0 3/4
+we 1 2 we we 0 3/4
+t 2 1 t t 0 3/4
+diit 3 4 dii iit 0 3/4
+e 0 1 e e 0 4/4
+hl 1 2 hl hl 0 4/4
+surveyors F 6+ sur ors 1 4/4
+
+way F 3 way way 0 1/4
+dim 0 3 dim dim 0 1/4
+dii 1 3 dii dii 0 1/4
+dep 0 3 dep dep 0 1/4
+diit 1 4 dii iit 0 1/4
+hl 2 2 hl hl 0 2/4
+g̲a 0 3 g̲a g̲a 0 2/4
+'nakw 1 5 'na akw 0 2/4
+it 2 2 it it 0 2/4
+hl 3 2 hl hl 0 2/4
+'naayetsa'a F 6+ 'na a'a 0 3/4
+dim F 3 dim dim 0 3/4
+win F 3 win win 0 3/4
+daa'w 0 5 daa a'w 0 3/4
+hl 1 2 hl hl 0 3/4
+reserve F 6+ res rve 1 4/4
+si 0 2 si si 0 4/4
+we 1 2 we we 0 4/4
+txw 2 3 txw txw 0 4/4
+ist 3 3 ist ist 0 4/4
+
+ii F 2 ii ii 0 1/4
+am F 2 am am 0 1/4
+win F 3 win win 0 1/4
+ky'ax̲ F 6+ ky' ax̲ 0 1/4
+he 0 2 he he 0 1/4
+hl 1 2 hl hl 0 1/4
+Gitwinhlguu'l F 6+ Git u'l 0 1/4
+dim F 3 dim dim 0 1/4
+'wii 0 4 'wi wii 0 1/4
+t'is 1 4 t'i 'is 0 1/4
+dim F 3 dim dim 0 1/4
+wag̲ayt F 6+ wag ayt 0 1/4
+jog̲o F 5 jog g̲o 0 2/4
+daa'whl F 6+ daa whl 0 2/4
+g̲o'o 0 5 g̲o o'o 0 2/4
+hl 1 2 hl hl 0 2/4
+k'i'y 0 5 k'i i'y 0 2/4
+hl 1 2 hl hl 0 2/4
+sg̲a'nist F 6+ sg̲ ist 0 2/4
+dim F 3 dim dim 0 2/4
+ii F 2 ii ii 0 2/4
+lok̲'on F 6+ lok 'on 0 2/4
+daa'whl F 6+ daa whl 0 2/4
+g̲o'o 0 5 g̲o o'o 0 3/4
+hl 1 2 hl hl 0 3/4
+k'i'y 0 5 k'i i'y 0 3/4
+hl 1 2 hl hl 0 3/4
+aks F 3 aks aks 0 3/4
+g̲o'o 0 5 g̲o o'o 0 3/4
+hl 1 2 hl hl 0 3/4
+ksen F 4 kse sen 0 3/4
+'nii F 4 'ni nii 0 3/4
+g̲a 0 3 g̲a g̲a 0 3/4
+'wa 1 3 'wa 'wa 0 3/4
+it 2 2 it it 0 3/4
+k̲'ali F 6+ k̲' ali 0 4/4
+daa'whl F 6+ daa whl 0 4/4
+g̲o'o 0 5 g̲o o'o 0 4/4
+hl 1 2 hl hl 0 4/4
+Meji'aadin F 6+ Mej din 1 4/4
+'nit 0 4 'ni nit 0 4/4
+hl 1 2 hl hl 0 4/4
+hasak̲ 0 6+ has ak̲ 0 4/4
+diit 1 4 dii iit 0 4/4
+hl 2 2 hl hl 0 4/4
+reserve F 6+ res rve 1 4/4
+
+way F 3 way way 0 1/4
+ii F 2 ii ii 0 1/4
+nee 0 3 nee nee 0 1/4
+dii 1 3 dii dii 0 1/4
+he 0 2 he he 0 1/4
+hl 1 2 hl hl 0 1/4
+Indian F 6+ Ind ian 1 1/4
+Agent 0 5 Age ent 1 2/4
+ima'a 1 5 ima a'a 0 2/4
+si 0 2 si si 0 2/4
+we 1 2 we we 0 2/4
+txw 2 3 txw txw 0 2/4
+it 3 2 it it 0 2/4
+e 0 1 e e 0 2/4
+hl 1 2 hl hl 0 3/4
+Indian F 6+ Ind ian 1 3/4
+Agent F 5 Age ent 1 3/4
+en 0 2 en en 0 3/4
+t 1 1 t t 0 3/4
+sag̲ayt 0 6+ sag ayt 0 3/4
+g̲oot 1 5 g̲o oot 0 3/4
+in 2 2 in in 0 4/4
+hl 3 2 hl hl 0 4/4
+gyet F 4 gye yet 0 4/4
+sag̲ayt 0 6+ sag ayt 0 4/4
+wen 1 3 wen wen 0 4/4
+diit 2 4 dii iit 0 4/4
+
+ii F 2 ii ii 0 1/4
+'nii F 4 'ni nii 0 1/4
+win F 3 win win 0 1/4
+he 0 2 he he 0 1/4
+hl 1 2 hl hl 0 1/4
+hli F 3 hli hli 0 1/4
+gyet 0 4 gye yet 0 1/4
+i 1 1 i i 0 1/4
+hl 2 2 hl hl 0 1/4
+Gitwinhlguu'l F 6+ Git u'l 0 2/4
+ji 0 2 ji ji 0 2/4
+daa 1 3 daa daa 0 2/4
+nee 0 3 nee nee 0 2/4
+ji 1 2 ji ji 0 2/4
+wil 0 3 wil wil 0 2/4
+si'm 1 4 si' i'm 0 2/4
+way F 3 way way 0 2/4
+ii F 2 ii ii 0 2/4
+nee 0 3 nee nee 0 3/4
+dim 1 3 dim dim 0 3/4
+dii 2 3 dii dii 0 3/4
+hasak̲ 0 6+ has ak̲ 0 3/4
+'m 1 2 'm 'm 0 3/4
+e 0 1 e e 0 3/4
+hl 1 2 hl hl 0 3/4
+k̲'am F 5 k̲' 'am 0 3/4
+hlgu 0 4 hlg lgu 0 3/4
+ts'uusx 1 6+ ts' usx 0 4/4
+hl 2 2 hl hl 0 4/4
+lax̲yip 0 6+ lax yip 0 4/4
+hl 1 2 hl hl 0 4/4
+dim F 3 dim dim 0 4/4
+ksi F 3 ksi ksi 0 4/4
+jep 0 3 jep jep 0 4/4
+i 1 1 i i 0 4/4
+si'm 2 4 si' i'm 0 4/4
+
+way F 3 way way 0 1/4
+ts'ax̲ F 6+ ts' ax̲ 0 1/4
+wil 0 3 wil wil 0 1/4
+t 1 1 t t 0 1/4
+ii 2 2 ii ii 0 1/4
+hl 3 2 hl hl 0 1/4
+he 0 2 he he 0 1/4
+hl 1 2 hl hl 0 1/4
+Gitwinhlguu'l F 6+ Git u'l 0 2/4
+ii F 2 ii ii 0 2/4
+nee 0 3 nee nee 0 2/4
+dii 1 3 dii dii 0 2/4
+hasak̲ 0 6+ has ak̲ 0 2/4
+diit 1 4 dii iit 0 2/4
+e 0 1 e e 0 2/4
+hl 1 2 hl hl 0 3/4
+reserve F 6+ res rve 1 3/4
+nee 0 3 nee nee 0 3/4
+dii 1 3 dii dii 0 3/4
+hasak̲ 0 6+ has ak̲ 0 3/4
+'m 1 2 'm 'm 0 3/4
+dim F 3 dim dim 0 3/4
+dip F 3 dip dip 0 4/4
+suwii F 5 suw wii 0 4/4
+gi'nam 0 6+ gi' nam 0 4/4
+hl 1 2 hl hl 0 4/4
+lax̲yip 0 6+ lax yip 0 4/4
+'m 1 2 'm 'm 0 4/4
+dihiida F 6+ dih ida 0 4/4
+
+ii F 2 ii ii 0 1/4
+he 0 2 he he 0 1/4
+diit 1 4 dii iit 0 1/4
+g̲at 2 4 g̲a ̲at 0 1/4
+e 0 1 e e 0 1/4
+hl 1 2 hl hl 0 1/4
+Indian F 6+ Ind ian 1 2/4
+Agent F 5 Age ent 1 2/4
+dim 0 3 dim dim 0 2/4
+t 1 1 t t 0 2/4
+ha'wit 0 6+ ha' wit 0 2/4
+in 1 2 in in 0 3/4
+hl 2 2 hl hl 0 3/4
+surveyors F 6+ sur ors 1 3/4
+dim F 3 dim dim 0 3/4
+suwii F 5 suw wii 0 3/4
+huut 0 4 huu uut 0 4/4
+in 1 2 in in 0 4/4
+diit 2 4 dii iit 0 4/4
+hl 3 2 hl hl 0 4/4
+surveyors F 6+ sur ors 1 4/4
+
+way F 3 way way 0 1/4
+ts'ax̲ F 6+ ts' ax̲ 0 1/4
+wil 0 3 wil wil 0 1/4
+t 1 1 t t 0 1/4
+ii 2 2 ii ii 0 1/4
+hl 3 2 hl hl 0 1/4
+he 0 2 he he 0 2/4
+hl 1 2 hl hl 0 2/4
+Gitwinhlguu'l F 6+ Git u'l 0 2/4
+ii F 2 ii ii 0 2/4
+nee 0 3 nee nee 0 2/4
+dii 1 3 dii dii 0 2/4
+hasak̲ 0 6+ has ak̲ 0 3/4
+diit 1 4 dii iit 0 3/4
+hl 2 2 hl hl 0 3/4
+reserve F 6+ res rve 1 3/4
+ii F 2 ii ii 0 3/4
+hets'im 0 6+ het 'im 0 3/4
+hox 1 3 hox hox 0 4/4
+bakw 0 4 bak akw 0 4/4
+t 1 1 t t 0 4/4
+g̲at 2 4 g̲a ̲at 0 4/4
+hl 3 2 hl hl 0 4/4
+surveyors F 6+ sur ors 1 4/4
+
+ii F 2 ii ii 0 1/4
+si 0 2 si si 0 1/4
+t'aa 1 4 t'a 'aa 0 1/4
+'ma 2 3 'ma 'ma 0 1/4
+m 3 1 m m 0 2/4
+dep 0 3 dep dep 0 2/4
+diit 1 4 dii iit 0 2/4
+hl 2 2 hl hl 0 2/4
+hlidaax 0 6+ hli aax 0 3/4
+hl 1 2 hl hl 0 3/4
+hlgu F 4 hlg lgu 0 3/4
+lax̲ F 4 lax ax̲ 0 3/4
+ha 0 2 ha ha 0 4/4
+'nii 1 4 'ni nii 0 4/4
+jok̲ 2 4 jok ok̲ 0 4/4
+
+ii F 2 ii ii 0 1/4
+al 0 2 al al 0 1/4
+'alg̲al 1 6+ 'al ̲al 0 1/4
+t 2 1 t t 0 1/4
+g̲at 3 4 g̲a ̲at 0 1/4
+hl 4 2 hl hl 0 1/4
+gyet F 4 gye yet 0 1/4
+hlis F 4 hli lis 0 2/4
+he 0 2 he he 0 2/4
+diit 1 4 dii iit 0 2/4
+e 0 1 e e 0 2/4
+hl 1 2 hl hl 0 2/4
+surveyors F 6+ sur ors 1 2/4
+nee 0 3 nee nee 0 3/4
+m 1 1 m m 0 3/4
+dim 2 3 dim dim 0 3/4
+hogyax̲ F 6+ hog ax̲ 0 3/4
+dim F 3 dim dim 0 3/4
+wil 0 3 wil wil 0 3/4
+si'm 1 4 si' i'm 0 3/4
+ji 0 2 ji ji 0 4/4
+daa 1 3 daa daa 0 4/4
+si 0 2 si si 0 4/4
+t'aa 1 4 t'a 'aa 0 4/4
+'ma 2 3 'ma 'ma 0 4/4
+si'm 3 4 si' i'm 0 4/4
+
+ii F 2 ii ii 0 1/4
+k̲'ap F 5 k̲' 'ap 0 1/4
+g̲ani 0 5 g̲a ani 0 2/4
+wila 1 4 wil ila 0 2/4
+yukw 0 4 yuk ukw 0 3/4
+hl 1 2 hl hl 0 3/4
+surveyors F 6+ sur ors 1 4/4
+
+way F 3 way way 0 1/4
+ii F 2 ii ii 0 1/4
+sag̲ayt 0 6+ sag ayt 0 1/4
+g̲oot 1 5 g̲o oot 0 1/4
+in 2 2 in in 0 1/4
+hl 3 2 hl hl 0 1/4
+ky'ul 0 5 ky' 'ul 0 1/4
+hl 1 2 hl hl 0 1/4
+sim'oogit F 6+ sim git 0 2/4
+hli F 3 hli hli 0 2/4
+gyet 0 4 gye yet 0 2/4
+i 1 1 i i 0 2/4
+hl 2 2 hl hl 0 2/4
+Gitwinhlguu'l F 6+ Git u'l 0 2/4
+ii F 2 ii ii 0 2/4
+he 0 2 he he 0 3/4
+diit 1 4 dii iit 0 3/4
+dim F 3 dim dim 0 3/4
+sg̲a 0 4 sg̲ g̲a 0 3/4
+sgi 1 3 sgi sgi 0 3/4
+txw 2 3 txw txw 0 3/4
+i 3 1 i i 0 3/4
+'m 4 2 'm 'm 0 4/4
+dim F 3 dim dim 0 4/4
+suwii F 5 suw wii 0 4/4
+huut 0 4 huu uut 0 4/4
+in 1 2 in in 0 4/4
+'m 2 2 'm 'm 0 4/4
+'nidiit F 6+ 'ni iit 0 4/4
+
+ii F 2 ii ii 0 1/4
+hasak̲ 0 6+ has ak̲ 0 1/4
+'m 1 2 'm 'm 0 1/4
+dim F 3 dim dim 0 1/4
+hogwin F 6+ hog win 0 1/4
+lit 0 3 lit lit 0 2/4
+xw 1 2 xw xw 0 2/4
+hl 2 2 hl hl 0 2/4
+k̲'ay F 5 k̲' 'ay 0 2/4
+limx̲s 0 6+ lim x̲s 0 3/4
+m 1 1 m m 0 3/4
+gyet F 4 gye yet 0 3/4
+dim F 3 dim dim 0 3/4
+en 0 2 en en 0 4/4
+t 1 1 t t 0 4/4
+hlimoo 0 6+ hli moo 0 4/4
+'m 1 2 'm 'm 0 4/4
+
+way F 3 way way 0 1/4
+'nit 0 4 'ni nit 0 1/4
+hl 1 2 hl hl 0 2/4
+wil 0 3 wil wil 0 3/4
+diit 1 4 dii iit 0 4/4
+
+ii 0 2 ii ii 0 1/4
+t 1 1 t t 0 1/4
+hap 0 3 hap hap 0 2/4
+diit 1 4 dii iit 0 3/4
+hl 2 2 hl hl 0 3/4
+surveyors F 6+ sur ors 1 4/4
+
+ii 0 2 ii ii 0 1/4
+t 1 1 t t 0 1/4
+dok̲ 0 4 dok ok̲ 0 1/4
+diit 1 4 dii iit 0 1/4
+hl 2 2 hl hl 0 2/4
+an 0 2 an an 0 2/4
+dep 1 3 dep dep 0 2/4
+a'a 2 3 a'a a'a 0 3/4
+tape F 4 tap ape 1 3/4
+dip F 3 dip dip 0 3/4
+si 0 2 si si 0 3/4
+we 1 2 we we 1 4/4
+di 2 2 di di 0 4/4
+t 3 1 t t 0 4/4
+
+dok̲ 0 4 dok ok̲ 0 1/4
+diit 1 4 dii iit 0 1/4
+hl 2 2 hl hl 0 1/4
+an 0 2 an an 0 1/4
+hoox 1 4 hoo oox 0 1/4
+a'a 2 3 a'a a'a 0 2/4
+surveyors F 6+ sur ors 1 2/4
+equipment F 6+ equ ent 1 2/4
+si 0 2 si si 0 2/4
+we 1 2 we we 0 3/4
+di 2 2 di di 0 3/4
+hl 3 2 hl hl 0 3/4
+an 0 2 an an 0 3/4
+hooy 1 4 hoo ooy 0 4/4
+a'a 2 3 a'a a'a 0 4/4
+hl 3 2 hl hl 0 4/4
+surveyors F 6+ sur ors 1 4/4
+
+ii 0 2 ii ii 0 1/4
+t 1 1 t t 0 1/4
+sim F 3 sim sim 0 1/4
+kwhlii F 6+ kwh lii 0 2/4
+his 0 3 his his 0 2/4
+yets 1 4 yet ets 0 3/4
+diit 2 4 dii iit 0 3/4
+e 0 1 e e 0 3/4
+hl 1 2 hl hl 0 4/4
+luuhligyootxw F 6+ luu txw 0 4/4
+
+ii 0 2 ii ii 0 1/4
+t 1 1 t t 0 1/4
+huut 0 4 huu uut 0 2/4
+in 1 2 in in 0 2/4
+diit 2 4 dii iit 0 3/4
+hl 3 2 hl hl 0 3/4
+surveyors F 6+ sur ors 1 4/4
+
+nee 0 3 nee nee 0 1/4
+dii 1 3 dii dii 0 1/4
+'nekw 0 5 'ne ekw 0 2/4
+t 1 1 t t 0 2/4
+ii F 2 ii ii 0 3/4
+bakw 0 4 bak akw 0 3/4
+hl 1 2 hl hl 0 4/4
+police F 6+ pol ice 1 4/4
+
+gidi 0 4 gid idi 0 1/4
+dok̲ 1 4 dok ok̲ 0 1/4
+diit 2 4 dii iit 0 1/4
+hl 3 2 hl hl 0 1/4
+naa 0 3 naa naa 0 1/4
+hl 1 2 hl hl 0 1/4
+g̲ay F 4 g̲a ̲ay 0 1/4
+ha'niig̲oot 0 6+ ha' oot 0 2/4
+diit 1 4 dii iit 0 2/4
+huk 0 3 huk huk 0 2/4
+sxw 1 3 sxw sxw 0 2/4
+it 2 2 it it 0 2/4
+e 0 1 e e 0 2/4
+hl 1 2 hl hl 0 2/4
+win F 3 win win 0 3/4
+sim F 3 sim sim 0 3/4
+kwhlii F 6+ kwh lii 0 3/4
+gat 0 3 gat gat 0 3/4
+g̲oo 1 4 g̲o ̲oo 0 3/4
+din 2 3 din din 0 3/4
+diit 3 4 dii iit 0 3/4
+hl 4 2 hl hl 0 4/4
+an 0 2 an an 0 4/4
+hoox 1 4 hoo oox 0 4/4
+a'a 2 3 a'a a'a 0 4/4
+hl 3 2 hl hl 0 4/4
+surveyors F 6+ sur ors 1 4/4
+
+ii 0 2 ii ii 0 1/4
+t 1 1 t t 0 1/4
+luu 0 3 luu luu 0 2/4
+wen 1 3 wen wen 0 3/4
+din 2 3 din din 0 3/4
+diit 3 4 dii iit 0 4/4
+
+hlis 0 4 hli lis 0 1/4
+t 1 1 t t 0 1/4
+di 0 2 di di 0 1/4
+seks 1 4 sek eks 0 1/4
+hl 2 2 hl hl 0 1/4
+police 0 6+ pol ice 1 1/4
+hl 1 2 hl hl 0 1/4
+gyet F 4 gye yet 0 1/4
+en 0 2 en en 0 2/4
+t 1 1 t t 0 2/4
+sim F 3 sim sim 0 2/4
+kwhlii F 6+ kwh lii 0 2/4
+his 0 3 his his 0 2/4
+yets 1 4 yet ets 0 2/4
+hl 2 2 hl hl 0 2/4
+an 0 2 an an 0 2/4
+hoox 1 4 hoo oox 0 3/4
+a'a 2 3 a'a a'a 0 3/4
+hl 3 2 hl hl 0 3/4
+surveyors F 6+ sur ors 1 3/4
+ii F 2 ii ii 0 3/4
+g̲ani F 5 g̲a ani 0 3/4
+'nit 0 4 'ni nit 0 3/4
+hl 1 2 hl hl 0 3/4
+he 0 2 he he 0 4/4
+hl 1 2 hl hl 0 4/4
+hli F 3 hli hli 0 4/4
+gyet 0 4 gye yet 0 4/4
+i 1 1 i i 0 4/4
+hl 2 2 hl hl 0 4/4
+Gitwinhlguu'l F 6+ Git u'l 0 4/4
+
+k̲'ap F 5 k̲' 'ap 0 1/4
+dim F 3 dim dim 0 1/4
+sg̲a 0 4 sg̲ g̲a 0 2/4
+sgi 1 3 sgi sgi 0 2/4
+txw 2 3 txw txw 0 3/4
+i 3 1 i i 0 3/4
+'m 4 2 'm 'm 0 4/4
+
+ii F 2 ii ii 0 1/4
+luu 0 3 luu luu 0 1/4
+wen 1 3 wen wen 0 1/4
+hl 2 2 hl hl 0 1/4
+ligi F 4 lig igi 0 1/4
+gwilun 0 6+ gwi lun 0 2/4
+ima'a 1 5 ima a'a 0 2/4
+hl 2 2 hl hl 0 2/4
+sim 0 3 sim sim 0 2/4
+gi 1 2 gi gi 0 2/4
+gyet 2 4 gye yet 0 3/4
+g̲o'o 0 5 g̲o o'o 0 3/4
+hl 1 2 hl hl 0 3/4
+Oakalla F 6+ Oak lla 1 3/4
+Prison F 6+ Pri son 1 3/4
+si 0 2 si si 0 4/4
+we 1 2 we we 0 4/4
+txw 2 3 txw txw 0 4/4
+it 3 2 it it 0 4/4
+
+ligi F 4 lig igi 0 1/4
+t'imis 0 6+ t'i mis 0 1/4
+ima'a 1 5 ima a'a 0 2/4
+hl 2 2 hl hl 0 2/4
+k'uuhl F 6+ k'u uhl 0 3/4
+luu 0 3 luu luu 0 3/4
+wen 1 3 wen wen 0 4/4
+diit 2 4 dii iit 0 4/4
+
+way F 3 way way 0 1/4
+ii F 2 ii ii 0 1/4
+yukw 0 4 yuk ukw 0 1/4
+hl 1 2 hl hl 0 1/4
+luu 0 3 luu luu 0 1/4
+wen 1 3 wen wen 0 2/4
+hl 2 2 hl hl 0 2/4
+sim 0 3 sim sim 0 2/4
+gi 1 2 gi gi 0 2/4
+get 2 3 get get 0 3/4
+dip 0 3 dip dip 0 3/4
+xwin 1 4 xwi win 0 3/4
+ii F 2 ii ii 0 3/4
+hets'im 0 6+ het 'im 0 3/4
+hox 1 3 hox hox 0 4/4
+bakw 0 4 bak akw 0 4/4
+hl 1 2 hl hl 0 4/4
+surveyors F 6+ sur ors 1 4/4
+
+way F 3 way way 0 1/4
+ii F 2 ii ii 0 1/4
+sim F 3 sim sim 0 1/4
+di 0 2 di di 0 1/4
+t'e'l 1 5 t'e e'l 0 1/4
+t 2 1 t t 0 1/4
+ii 0 2 ii ii 0 1/4
+t 1 1 t t 0 1/4
+dep 0 3 dep dep 0 2/4
+diit 1 4 dii iit 0 2/4
+hl 2 2 hl hl 0 2/4
+hlgu 0 4 hlg lgu 0 2/4
+ts'uusx 1 6+ ts' usx 0 2/4
+hl 2 2 hl hl 0 2/4
+lax̲ F 4 lax ax̲ 0 2/4
+ha 0 2 ha ha 0 2/4
+'nii 1 4 'ni nii 0 3/4
+yip 2 3 yip yip 0 3/4
+gi'nam 0 6+ gi' nam 0 3/4
+i 1 1 i i 0 3/4
+hl 2 2 hl hl 0 3/4
+Indian F 6+ Ind ian 1 3/4
+Agent F 5 Age ent 1 3/4
+t 0 1 t t 0 3/4
+xwin 1 4 xwi win 0 4/4
+e 0 1 e e 0 4/4
+hl 1 2 hl hl 0 4/4
+hli F 3 hli hli 0 4/4
+gyet 0 4 gye yet 0 4/4
+i 1 1 i i 0 4/4
+hl 2 2 hl hl 0 4/4
+Gitwinhlguu'l F 6+ Git u'l 0 4/4
+
+one F 3 one one 1 1/4
+mile F 4 mil ile 1 1/4
+by F 2 by by 1 2/4
+one F 3 one one 1 2/4
+mile F 4 mil ile 1 3/4
+diphiida F 6+ dip ida 0 3/4
+'nuu'm F 6+ 'nu u'm 0 4/4
+
+g̲asg̲oo 0 6+ g̲a ̲oo 0 1/4
+hl 1 2 hl hl 0 1/4
+lax̲bits'iixw 0 6+ lax ixw 0 1/4
+hl 1 2 hl hl 0 1/4
+surveyors F 6+ sur ors 1 1/4
+ii F 2 ii ii 0 1/4
+k̲'ap F 5 k̲' 'ap 0 1/4
+'nit 0 4 'ni nit 0 2/4
+hl 1 2 hl hl 0 2/4
+g̲an 0 4 g̲a ̲an 0 2/4
+wil 1 3 wil wil 0 2/4
+hl 2 2 hl hl 0 2/4
+he 0 2 he he 0 2/4
+hl 1 2 hl hl 0 2/4
+Gitwinhlguu'l F 6+ Git u'l 0 3/4
+gyuu'n F 6+ gyu u'n 0 3/4
+nee 0 3 nee nee 0 3/4
+dii 1 3 dii dii 0 3/4
+sgi 0 3 sgi sgi 0 3/4
+dim 1 3 dim dim 0 3/4
+dii 2 3 dii dii 0 3/4
+k'uhl F 5 k'u uhl 0 4/4
+t'aa 0 4 t'a 'aa 0 4/4
+ti 1 2 ti ti 0 4/4
+hl 2 2 hl hl 0 4/4
+surveyors F 6+ sur ors 1 4/4
+reserve F 6+ res rve 1 4/4
+
+nee 0 3 nee nee 0 1/4
+dii 1 3 dii dii 0 1/4
+gu F 2 gu gu 0 1/4
+ji F 2 ji ji 0 2/4
+t'am 0 4 t'a 'am 0 2/4
+diit 1 4 dii iit 0 3/4
+diye 0 4 diy iye 0 3/4
+hl 1 2 hl hl 0 3/4
+he 0 2 he he 0 4/4
+t 1 1 t t 0 4/4
+
+'nit 0 4 'ni nit 0 1/4
+hl 1 2 hl hl 0 2/4
+g̲abi 0 5 g̲a abi 0 3/4
+it 1 2 it it 1 4/4
