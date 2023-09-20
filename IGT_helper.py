@@ -6,10 +6,10 @@ import gloss_lost.utils as utils
 
 
 ### Preprocessing functions ###
-def preprocess_translation(translation_sentence, tilde=False):
+def preprocess_translation(translation_sentence, tilde=False, lower=True):
     '''Preprocess the translation sentence.'''
     new_sentence = translation_sentence.strip()
-    new_sentence = new_sentence.lower()
+    if lower: new_sentence = new_sentence.lower()
     new_sentence = re.sub(r'[!?\[\];:"/.(),]', ' ', new_sentence)
     new_sentence = re.sub(r'[=|$¿¡]', ' ', new_sentence) # New
     if tilde: new_sentence = re.sub(r'~', ' ', new_sentence)
@@ -24,7 +24,7 @@ def preprocess_translation(translation_sentence, tilde=False):
     return new_sentence.strip()
 
 def split_uncovered(uncovered_file, save_path, file_name, covered=False,
-                    tilde=False):
+                    tilde=False, lower=True):
     '''Convert the Shared task file into three separate files.
 
     4 tiers:
@@ -65,7 +65,7 @@ def split_uncovered(uncovered_file, save_path, file_name, covered=False,
         source_list.append(source[3:])
         gloss_list.append(gloss[3:])
         translation_list.append(
-                            preprocess_translation(translation[3:], tilde=tilde))
+            preprocess_translation(translation[3:], tilde=tilde, lower=lower))
 
 
     #print(source_list[0])
@@ -75,6 +75,7 @@ def split_uncovered(uncovered_file, save_path, file_name, covered=False,
     utils.save_file('\n'.join(source_list), os.path.join(save_path, f'{file_name}_src.txt'))
     if not covered: utils.save_file('\n'.join(gloss_list), os.path.join(save_path, f'{file_name}_glo.txt'))
     utils.save_file('\n'.join(translation_list), os.path.join(save_path, f'{file_name}_trg.txt'))
+
 
 ### Language-specific preprocessing ###
 def preprocess_lezgi_gloss(gloss_sentence):
