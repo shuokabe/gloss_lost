@@ -20,16 +20,25 @@ UNIT_QTY_POS = UNIT_QTY + 2 # 6
 UNIT_QTY_MORPH = UNIT_QTY_POS + 2 # 8
 UNIT_QTY_BOTH = UNIT_QTY_MORPH + 2 # 10
 UNIT_QTY_FULL = UNIT_QTY_MORPH + 3 - 1 + 2 #+ 2 # 10 # 11
-UNIT_QTY_DIST = UNIT_QTY_MORPH + 2 + 2 #+ 1 # 12 + 1
+UNIT_QTY_DIST = UNIT_QTY_MORPH + 2 + 2 #+ 1 # 12 #+ 1
+UNIT_QTY_COMP = UNIT_QTY_DIST + 2 #+ 3 # 15
+UNIT_QTY_COMP_BOTH = UNIT_QTY_COMP + 1 # 16
 UNIT_QTY_DICT = {'base': UNIT_QTY, 'pos': UNIT_QTY_POS, 'morph': UNIT_QTY_MORPH,
                   'both': UNIT_QTY_BOTH, 'full': UNIT_QTY_FULL,
-                  'dist': UNIT_QTY_DIST
+                  'dist': UNIT_QTY_DIST, 'comp': UNIT_QTY_COMP,
+                  'comp_both': UNIT_QTY_COMP_BOTH
                  }
 
 # Punctuation list
 PUNCTUATION_LIST = [',', r'.', '«', '»,', '»', '».', '?', '...', ':',
                     '?»', '.»', '"', ',»', '(', '…', ')', r'."', '?)',
-                    '?"', '!', '???']
+                    '?"', '!', '???', '$$$']
+DELEX_PUNCTUATION_LIST = PUNCTUATION_LIST + ['“', '”', '*'] + ['$']
+
+# Vowel list
+VOWEL_LIST = ['a', 'e', 'i', 'o', 'u', 'y', 'ä',
+              'á', 'é', 'í', 'ì', 'ó', 'ú']
+CYRILLIC_VOWEL = ['а', 'е', 'и', 'о', 'у', 'э', 'ю', 'я', 'ы']
 
 
 class LabelHandler:
@@ -73,19 +82,26 @@ class LabelHandler:
         self.both = bool(label_type == 'both') # Both labels
         self.full = bool(label_type == 'full') # Using all inputs and outputs
         self.dist = bool(label_type == 'dist') # Using copy and position features
+        self.comp = bool(label_type == 'comp') # Using origin and more features
+        self.comp_both = bool(label_type == 'comp_both') # Use both references
 
         self.use_gold = use_gold # Using gold reference as main output label
         self.language = language
 
         if self.full: self.both = True
+        if self.comp or self.comp_both: self.dist = True
         if self.full or self.both or self.dist: self.morph = True
         if self.morph: self.pos = True
 
         # Unit length
         if self.full:
             self.unit_length = UNIT_QTY_FULL # 10 + 2
+        elif self.comp_both:
+            self.unit_length = UNIT_QTY_DICT[label_type]
+        elif self.comp:
+            self.unit_length = UNIT_QTY_DICT[label_type]
         elif self.dist:
-            self.unit_length = UNIT_QTY_DICT['dist'] # 12?
+            self.unit_length = UNIT_QTY_DICT[label_type] # 12?
         elif self.both:
             self.unit_length = UNIT_QTY_BOTH # 10
         elif self.morph:
@@ -102,6 +118,10 @@ class LabelHandler:
         #FULL_OUTPUT_LEN = STRUCT_OUTPUT_LEN + 2 + 2 # 7
         if self.full:
             self.output_length = 7 # label_position = 5
+        elif self.comp_both:
+            self.output_length = 6
+        elif self.comp:
+            self.output_length = 6 - 1
         elif self.dist:
             self.output_length = 5 #+ 1 # label_position = 7
         elif self.both:
@@ -120,6 +140,8 @@ class LabelHandler:
         '''Display configuration information.'''
         # Explain the label type
         if self.both: print(f'Using both aligned and gold lexical glosses')
+        if self.comp_both: print('Using comp with both references')
+        if self.comp: print(f'Using origin and more features')
         if self.dist: print(f'Using copy and position features')
         if self.morph: print(f'Using morphological features in input and gold labels')
         if self.full: print(f'Using all inputs and outputs')
@@ -191,12 +213,13 @@ class Corpus:
     def to_wapiti_format(self, alignment, expand=False, pos=False, verbose=False,
                          train_index=0, gold=False, label_format='base',
                          punctuation=False, use_gold=False, language='en',
-                         hyphen=True):
+                         hyphen=True, train_dict=None):
         '''Convert a corpus into a Wapiti format file to use with Lost.
 
         label_type:
         gold: use the reference gloss label.
-        both: use both the reference gloss label (main) and the aligned label.'''
+        both: use both the reference gloss label (main) and the aligned label.
+        train_dict is here for the comp method in test conditions.'''
         # Describe the corpus creation setting
         train = bool(train_index > 0) # Use of training dictionary?
 
@@ -246,7 +269,10 @@ class Corpus:
             print('Use gold training dictionary')
             self.train_dict = self.create_gold_dictionary(train_index)
         else:
-            self.train_dict = None
+            if test:
+                self.train_dict = train_dict
+            else:
+                self.train_dict = None
 
         wapiti_sent_list = []
         for i in tqdm(range(self.n_sent)):
@@ -257,7 +283,8 @@ class Corpus:
             if test or self.test: # No alignment file
                 wapiti_line = sentence.to_wapiti_test_sentence(
                     self.label_type.pos, expand, verbose=verbose,
-                    gold=gold, label_type=self.label_type)
+                    train_dict=train_dict,
+                    gold=gold, label_type=self.label_type, punctuation=punctuation)
             else:
                 wapiti_line = sentence.to_wapiti_sentence(
                     split_alignment[i], pos=self.label_type.pos, expand=expand,
@@ -458,6 +485,16 @@ class Sentence:
         self.gloss = gloss
         self.translation = translation
 
+        # Handle hyphen as punctuation mark
+        if (' - ' in self.source) and (test or (' - ' in self.gloss)):
+            self.source = self.source.replace(' - ', ' $$$ ')
+            if not test:
+                self.gloss = self.gloss.replace(' - ', ' $$$ ')
+        if (self.source[0:2] == '- ') and (test or (self.gloss[0:2] == '- ')):
+            self.source = '$$$' + self.source[1:]
+            if not test:
+                self.gloss = '$$$' + self.gloss[1:]
+
         self.split_source = re.split('[ -]', self.source)
         self.split_gloss = re.split('[ -]', self.gloss)
         self.split_translation = utils.line_to_word(self.translation)
@@ -470,11 +507,13 @@ class Sentence:
 
         Format (biof=False): [(source_morpheme, position_index)]
         Format (biof=True): [(source_morpheme, BIOF_position_tag)]
+        Also creates a list with the number of morphemes per word
         '''
         split_source_with_hyphen = word_to_morpheme_decomp(self.source)
         #print(split_source_with_hyphen)
         position_list = []
         position_counter = 0
+        raw_morph_length_list = [] # Number of morphemes per word
         for i in range(len(split_source_with_hyphen) - 1):
             morpheme = split_source_with_hyphen[i]
             if morpheme == '-':
@@ -484,13 +523,23 @@ class Sentence:
             if split_source_with_hyphen[(i + 1)] == '-': # Word with several morphemes
                 continue
             else: # End of word
+                raw_morph_length_list.append(position_counter + 1)
                 position_counter = 0
         # Last element
         if (len(split_source_with_hyphen) > 1) and (split_source_with_hyphen[-2] == '-'): # Still in a word
             position_list.append((split_source_with_hyphen[-1], position_counter))
+            raw_morph_length_list.append(position_counter + 1)
         else: # New word
             position_list.append((split_source_with_hyphen[-1], 0))
+            raw_morph_length_list.append(position_counter + 1)
         utils.check_equality(self.n_morph, len(position_list))
+
+        # Number of morphemes per word
+        expand_morph_len_list = [[l] * l for l in raw_morph_length_list]
+        self.morph_length_list = utils.flatten_2D(expand_morph_len_list)
+        #print(raw_morph_length_list, self.morph_length_list, self.source)
+        utils.check_equality(self.n_morph, len(self.morph_length_list))
+
         #print('position: ', position_list)
 
         # Use BIOF tags instead of numbers
@@ -548,7 +597,9 @@ class Sentence:
         # For the grammatical glosses
         # For a Wapiti unit with morpheme boundaries
         split_source_with_hyphen = word_to_morpheme_decomp(self.source)
-        #print(split_source_with_hyphen)
+        #print('\t', split_source_with_hyphen)
+        #if '' in split_source_with_hyphen: print('\t', split_source_with_hyphen)
+        #if 'elu-s' in self.source: print('\telu', split_source_with_hyphen)
         # Use BIO morpheme position tags
         if label_type.full or label_type.both or label_type.morph: # label_type.dist
             morpheme_position = self.morpheme_position_list(biof=True)
@@ -582,15 +633,20 @@ class Sentence:
         wapiti_unit_list = []
         index = 0 # Index for all morphemes (i.e. without hyphen)
         j = 0 # Index for lexical gloss
+        no_align = bool(aligned_lex_gloss == []) # No alignment
+        copy_index = 0 # Keep track of copied morphemes
+        copy_bool = False # Keep track if the morpheme already has a copy_index
 
         for i in range(len(split_source_with_hyphen)):
             morpheme = split_source_with_hyphen[i] # Source morpheme
             if morpheme == '-':
                 pass
+            #elif morpheme == '':
+            #    print('\t', split_source_with_hyphen, morpheme_position)
             else:
                 length = len(morpheme) # Morpheme length
-                if label_type.morph:
-                    morph_init, morph_end = extract_letters(morpheme, length)
+                #if label_type.morph:
+                morph_init, morph_end = extract_letters(morpheme, length)
                 cap_length = cap_morpheme_length(length, cap_val=5)
 
                 gloss = self.split_gloss[index]
@@ -631,18 +687,66 @@ class Sentence:
                     if label_type.dist: # Copy and position feature
                         copy_trg = '1' #'-1'
                         position_trg = '-1'
+                elif morpheme.isdigit(): # Numbers
+                    label = gloss
+                    gram_lex = 'lex'
+                    aligned_pos = '?'
+                    if label_type.both: # With the reference label + correspondence tag
+                        reference = label
+                        label = 'NUMBER' # Trial
+                        correspondence = '-2'
+                    origin = 'T'
+                    if label_type.full: # With full inputs and outputs
+                        output_index_str = '-1' ###???
+                        relative_diff = '-1' ###???
+                        #origin = 'G' # 'P'
+                    if label_type.dist: # Copy and position feature
+                        copy_trg = '1' #'-1'
+                        position_trg = '-2'
+                elif no_align: # Lexical unit in a sentence with no alignment
+                    label = '?'
+                    trg_index = -1
+                    # Label origin
+                    origin = 'D'
+                    # Use gold lexical gloss
+                    if (gold or label_type.use_gold) and not label_type.both:
+                        label = gloss
+                    # More complex output label
+                    if label_type.pos: # With PoS tag
+                        gram_lex = 'lex'
+                        aligned_pos = '?'
+                    if label_type.both: #With the reference label + correspondence tag
+                        reference = gloss
+                        correspondence = str(0)
+                    if label_type.full:
+                        # Aligned index
+                        relative_diff = str(-1)
+                    if label_type.dist: # Copy and position feature
+                        copy_trg = str(0)
+                        position_trg = str(-1)
                 else: # Lexical unit (or hybrid unit)
                     #align_index = aligned_lex_gloss[j][1]
                     #aligned_lemma = aligned_lex_gloss[j][2]
                     label = aligned_lex_gloss[j][ALIGNED_LEMMA_POSITION]
+                    if ' ' in label: ### TEST
+                        print('SPACE', aligned_lex_gloss)
                     # Target (aligned) position
                     #if label in lemmatised_translation:
                     #    trg_index = lemmatised_translation.index(label) # For dist labels
                     #else: # Not aligned
                     #    trg_index = -1
                     trg_index = aligned_lex_gloss[j][TRG_INDEX_POSITION]
+
+                    # Label origin
+                    if label == gloss: # != '?':
+                        count_in_trg = min(lemmatised_translation.count(label), 1)
+                        origin = 'T' #f'T{count_in_trg}' #'T'
+                    else:
+                        origin = 'D'
+
                     # Use gold lexical gloss
-                    if (gold or label_type.use_gold) and not label_type.both:
+                    if (gold or label_type.use_gold) and (not label_type.both) \
+                        and (not label_type.comp_both):
                         label = gloss
                     # More complex output label
                     if label_type.pos: # With PoS tag
@@ -659,11 +763,6 @@ class Sentence:
                                 translation_length)
                         relative_diff = cap_relative_difference(relative_diff) #
                         #relative_diff = str(round(relative_diff, 1)) #2))
-                        if label == gloss: # != '?':
-                            count_in_trg = min(lemmatised_translation.count(label), 1)
-                            origin = f'T{count_in_trg}' #'T'
-                        else:
-                            origin = 'D'
                     if label_type.dist: # Copy and position feature
                         #copy_bool = int(bool(label.title() == morpheme.title()))
                         copy_trg = copy_in_sentence(label, split_source_with_hyphen)
@@ -672,40 +771,92 @@ class Sentence:
                         #trg_index = lemmatised_translation.index(label)
                         relative_trg_pos = max(trg_index / translation_length, -1)
                         position_trg = cap_position_in_sentence(relative_trg_pos)
-                        if label == gloss: # != '?':
-                            count_in_trg = min(lemmatised_translation.count(label), 1)
-                            origin = f'T{count_in_trg}' #'T'
-                        else:
-                            origin = 'D'
+                    if label_type.comp or label_type.comp_both:
+                        copy_src = copy_in_sentence(morpheme, tokenised_translation)
+                        if int(copy_src) > 0: print('TTT', morpheme, copy_src, copy_trg, copy_index)
+                        #copy_src = copy_trg # Test
+                        #utils.check_equality(copy_src, copy_trg)
+                        #if (copy_src != copy_trg) and int(copy_trg) >= 0:
+                        #    print(morpheme, tokenised_translation, label, split_source_with_hyphen)
+                        #    print('   ', copy_src, copy_trg)
+                        if int(copy_src) > 0: print(copy_src, copy_trg, copy_index, i)
+                        # Unique copy index for copied units
+                        # if (copy_src == str(1)) and (copy_src == copy_trg):
+                        #     print(f'More than one copy {copy_index}')
+                        #     #copy_index += 1
+                        #     #copy_src = str(copy_index)
+                        #     copy_src = str(1)
+                        # else:
+                        #     copy_src = str(0)
+                        # copy_trg = copy_src
+                        copy_bool = True
                     j += 1
 
                 # Basic inputs
-                unit_list = [morpheme, str(position), cap_length] #str(length)]
+                unit_list = [morpheme, str(position), cap_length,
+                             morph_init, morph_end] #str(length)]
                 if label_type.full:
-                    unit_list.extend([morph_init, morph_end,
+                    unit_list.extend([#morph_init, morph_end,
                     #unit_list = [morpheme, str(position), cap_length,
                                  #str(index),
-                                 reference, #label,
+                                 reference, #label,å
                                  gram_lex, aligned_pos, label, correspondence,
                                  #output_index_str,
                                  relative_diff, origin]) #])
+                elif label_type.comp or label_type.comp_both:
+                    if copy_bool:
+                        copy_bool = False
+                    else:
+                        copy_src = copy_in_sentence(morpheme, tokenised_translation)
+                    # copy_src = copy_in_sentence(morpheme, tokenised_translation)
+                    # if int(copy_src) > 0: print('TTT', morpheme, copy_src, copy_trg, copy_index)
+                    # #copy_src = copy_trg # Test
+                    # #utils.check_equality(copy_src, copy_trg)
+                    # #if (copy_src != copy_trg) and int(copy_trg) >= 0:
+                    # #    print(morpheme, tokenised_translation, label, split_source_with_hyphen)
+                    # #    print('   ', copy_src, copy_trg)
+                    # if int(copy_src) > 0: print(copy_src, copy_trg, copy_index, i)
+                    # # Unique copy index for copied units
+                    # if (copy_src == str(1)) and (copy_src == copy_trg):
+                    #     print(f'More than one copy {copy_index}')
+                    #     copy_index += 1
+                    #     copy_src = str(copy_index)
+                    # else:
+                    #     copy_src = str(0)
+                    # copy_trg = copy_src
+                    relative_src_pos = index / self.n_morph
+                    position_src = cap_position_in_sentence(relative_src_pos)
+                    morph_length = str(self.morph_length_list[index])
+                    seen = str(seen_morpheme_bool(morpheme, train_dict)) # Change: seen in dict?
+                    #print(seen_morpheme_bool(morpheme, train_dict))
+                    delex_morph = delexicalise(morpheme)
+                    if label_type.comp_both:
+                        unit_list.extend([copy_src, position_src,
+                                     morph_length, delex_morph, #seen,
+                                     gloss, gram_lex, aligned_pos,
+                                     copy_trg, position_trg, label]) #, origin])
+                    else: # label_type.comp
+                        unit_list.extend([copy_src, position_src,
+                                     morph_length, delex_morph, #seen,
+                                     label, gram_lex, aligned_pos,
+                                     copy_trg, position_trg]) #, origin])
                 elif label_type.dist:
                     copy_src = copy_in_sentence(morpheme, tokenised_translation)
                     relative_src_pos = index / self.n_morph
                     position_src = cap_position_in_sentence(relative_src_pos)
                     seen = 0 # Change: seen in dict?
-                    unit_list.extend([morph_init, morph_end,
+                    unit_list.extend([#morph_init, morph_end,
                                  copy_src, position_src,
                                  label, gram_lex, aligned_pos,
                                  copy_trg, position_trg]) #, origin])
                 elif label_type.both: # With the reference label
                     #unit_list = [morpheme, str(position), str(length),
-                    unit_list.extend([morph_init, morph_end,
+                    unit_list.extend([#morph_init, morph_end,
                             reference, gram_lex, aligned_pos, label,
                             correspondence])
                 elif label_type.morph:
                     #unit_list = [morpheme, str(position), cap_length, #str(length),
-                    unit_list.extend([morph_init, morph_end,
+                    unit_list.extend([#morph_init, morph_end,
                                  label, gram_lex, aligned_pos])
                     #utils.check_equality(len(unit_list), UNIT_QTY_BOTH)
                 elif label_type.pos: # With PoS tag
@@ -725,7 +876,8 @@ class Sentence:
 
     # Create the Wapiti unit for a TEST sentence
     def to_wapiti_test_sentence(self, pos=False, expand=False,
-                           verbose=False, gold=False, label_type=None):
+                           verbose=False, train_dict=None,
+                           gold=False, label_type=None, punctuation=False):
         '''Create from the inputs for a sentence its corresponding Wapiti TEST unit.
 
         Output for each morpheme:
@@ -736,6 +888,8 @@ class Sentence:
         # For the grammatical glosses
         # For a Wapiti unit with morpheme boundaries
         split_source_with_hyphen = word_to_morpheme_decomp(self.source)
+        #if '' in split_source_with_hyphen: print('\t', split_source_with_hyphen)
+        #if 'elu-s' in self.source: print('\telu', split_source_with_hyphen)
         #print(split_source_with_hyphen)
 
         # Use BIO morpheme position tags
@@ -753,16 +907,20 @@ class Sentence:
         #translation_length = len(self.split_translation)
         # To get the correct relative difference value
         tokenised_translation, lemmatised_translation = \
-                        sp.lemmatise_sentence_for_alignment(self.translation)
+            sp.lemmatise_sentence_for_alignment(self.translation,
+                                                            label_type.language)
         #translation_length = len(tokenised_translation)
         wapiti_unit_list = []
         index = 0 # Index for all morphemes (i.e. without hyphen)
         j = 0 # Index for lexical gloss
+        copy_index = 0 # Keep track of copied morphemes
 
         for i in range(len(split_source_with_hyphen)):
             morpheme = split_source_with_hyphen[i] # Source morpheme
             if morpheme == '-':
                 pass
+            #elif morpheme == '':
+            #    print('\t', split_source_with_hyphen, morpheme_position)
             else:
                 length = len(morpheme) # Morpheme length
                 if label_type.morph:
@@ -775,15 +933,40 @@ class Sentence:
                 position = position_pair[1]
 
                 # Basic inputs
-                unit_list = [morpheme, str(position), cap_length] #str(length)]
-                if label_type.dist:
+                unit_list = [morpheme, str(position), cap_length,
+                             morph_init, morph_end] #str(length)]
+                if label_type.comp or label_type.comp_both:
+                    copy_src = copy_in_sentence(morpheme, tokenised_translation)
+                    print('TTT', morpheme, copy_src, copy_index)
+                    #copy_src = copy_trg # Test
+                    #utils.check_equality(copy_src, copy_trg)
+                    #if (copy_src != copy_trg) and int(copy_trg) >= 0:
+                    #    print(morpheme, tokenised_translation, label, split_source_with_hyphen)
+                    #    print('   ', copy_src, copy_trg)
+                    if int(copy_src) > 0: print(copy_src, copy_index)
+                    # Unique copy index for copied units
+                    # if (copy_src == str(1)) or morpheme.isdigit() \
+                    #     or (punctuation and (morpheme in PUNCTUATION_LIST)):
+                    #     copy_index += 1
+                    #     copy_src = str(copy_index)
+                    #     print('Final val?', copy_src, copy_index)
+                    relative_src_pos = index / self.n_morph
+                    position_src = cap_position_in_sentence(relative_src_pos)
+                    morph_length = str(self.morph_length_list[index])
+                    seen = str(seen_morpheme_bool(morpheme, train_dict)) # Change: seen in dict?
+                    delex_morph = delexicalise(morpheme)
+                    if copy_index > 0: print(morpheme, copy_src)
+                    unit_list.extend([#morph_init, morph_end,
+                                 copy_src, position_src, morph_length, #seen])
+                                 delex_morph])
+                elif label_type.dist:
                     copy_src = copy_in_sentence(morpheme, tokenised_translation)
                     relative_src_pos = index / self.n_morph
                     position_src = cap_position_in_sentence(relative_src_pos)
-                    unit_list.extend([morph_init, morph_end,
+                    unit_list.extend([#morph_init, morph_end,
                                  copy_src, position_src])
                 elif label_type.both or label_type.full or label_type.morph: # Five inputs
-                    unit_list.extend([morph_init, morph_end])
+                    pass #unit_list.extend([morph_init, morph_end])
                 #elif label_type.full:
                 #    unit_list.extend([morph_init, morph_end]) #, str(index)]) #,
                 #elif label_type.morph:
@@ -1107,8 +1290,8 @@ def copy_in_sentence(string, tokenised_sentence):
 
     src: the source morpheme is in the translation
     trg: the translation word is in the source sentence'''
-    if (string.capitalize() in tokenised_sentence) \
-        or (string.lower() in tokenised_sentence):
+    if ((string.capitalize() in tokenised_sentence) \
+        or (string.lower() in tokenised_sentence)): # and (len(string) > 1):
         return str(1)
     else:
         return str(0)
@@ -1131,6 +1314,37 @@ def cap_position_in_sentence(relative_pos):
         return '4/4' #str(1)
     else:
         raise_value_error()
+
+# Seen source morpheme or not
+def seen_morpheme_bool(morpheme, dictionary):
+    '''Compute 1 if the morpheme was seen at least twice in the dictionary.'''
+    if morpheme in dictionary:
+        if dictionary[morpheme][1] > 1: #Frequency
+            return 1
+        else:
+            return 0
+    else: # Never seen
+        return 0
+
+# Delexicalise source morpheme
+def delexicalise(morpheme):
+    '''Convert a morpheme into a string of consonants and vowels.
+
+    add_vowel uses additional vowel (Cyrillic, IPA, etc.).'''
+    add_vowel = True
+    delex_list = []
+    for letter in morpheme:
+        if letter in VOWEL_LIST:
+            delex_list.append('V')
+        elif add_vowel and (letter in CYRILLIC_VOWEL):
+            delex_list.append('V')
+        elif letter.isdigit():
+            delex_list.append('N')
+        elif letter in DELEX_PUNCTUATION_LIST: #PUNCTUATION_LIST:
+            delex_list.append('P')
+        else:
+            delex_list.append('C')
+    return ''.join(delex_list)
 
 # Process alignments
 def string_to_pair_list(alignment_string):

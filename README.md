@@ -11,7 +11,7 @@ The `run.sh` file contains all the parameters to run Lost.
 Disclaimer: this is a work in progress and contains some unpractical implementation parameters or constraints. We strive to remove them gradually.
 
 Lost requires the data to be in a specific format, that can be obtained by following the step-by-step guide below. 
-The `data/` directory contains an example for the Gitksan corpus of the SIGMORPHON Shared Task.
+The `data/` directory contains example files for the Gitksan corpus of the SIGMORPHON Shared Task.
 
 ### 0. Initial data format
 The programme needs the following data:
@@ -72,7 +72,7 @@ Additional parameters can be specified, which are consistent with the previous s
 
 See `wapiti_to_lost.py` for more details.
 
-This function returns four files, as in `data/lost_format/`.
+This function returns four files, as in `data/lost_format/`: one reference file for the train set (`.ref`) and three search space files (`.spc`), if a development dataset is used.
 
 ### 4. Running Lost
 In the run files, the data paths should be modified: 
@@ -82,7 +82,7 @@ In the run files, the data paths should be modified:
 - `mdl-save`, `str-save`: paths to save the model.
 
 Launching the model is done from the terminal with `./run.sh`. 
-The output for the `dist` label type can be seen at `data/output/output_gitksan_IGT_conc_match_dist_31.out`.
+The output using the `dist` label can be seen at `data/output/output_gitksan_IGT_conc_match_dist_31.out`.
 
 ### 5. Evaluating the output
 Using the `convert_lost_to_IGT` function from the `IGT_helper.py` file, the output from Lost can be converted back to the IGT format. The evaluation can then be carried out with the [Shared Task evaluation code][4] or a custom evaluation function.
@@ -95,6 +95,9 @@ Settings used in TALN:
 
 Settings used in Shared Task:
 `morph` and `dist`
+
+Settings used in ...:
+`comp`
 
 ## Citation
 - For Lost

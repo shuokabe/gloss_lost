@@ -6,7 +6,7 @@ import re
 
 from tqdm import tqdm
 
-import gloss_lost.cld_tools.preprocess as pp #cld_tools.preprocess as pp
+import gloss_lost.preprocess as pp #cld_tools.preprocess as pp
 import gloss_lost.utils as utils
 import gloss_lost.spacy_processing as sp #spacy_processing as sp
 
@@ -37,7 +37,8 @@ def parse_args():
     #parser.add_argument('--both', action=argparse.BooleanOptionalAction,
     #                     help='when using both labels (gold and aligned)')
     parser.add_argument('--label_type', default='base', type=str,
-                         choices=['base', 'pos', 'both', 'full', 'morph', 'dist'],
+                         choices=['base', 'pos', 'both', 'full', 'morph',
+                         'dist', 'comp'],
                          help='label type (input & output)')
     parser.add_argument('--dev_size', default=0, type=int,
                         help='dev data size')
@@ -45,7 +46,14 @@ def parse_args():
     parser.add_argument('--train_dict', default=None, #type=dict,
                         help='training dictionary for the search space')
     parser.add_argument('--punctuation', action=argparse.BooleanOptionalAction,
-                         help='when punctuation marks should be predicted')
+                        help='when punctuation marks should be predicted')
+    parser.add_argument('--trg_language', default='en', type=str,
+                        help='target (translation) language')
+    parser.add_argument('--without_translation',
+                        action=argparse.BooleanOptionalAction,
+                        help='remove translation words from search space')
+    parser.add_argument('--custom_stop_words', default=None, type=str,
+                        help='custom stop words to remove from the translation')
 
     return parser.parse_args()
 
@@ -57,6 +65,8 @@ LEN_MORPH = UNIT_QTY_DICT['morph'] #LEN_THREE_OUTPUTS + 2 # 8
 LEN_FIVE_OUTPUTS = UNIT_QTY_DICT['both'] #LEN_MORPH + 2 # 8
 LEN_FULL = UNIT_QTY_DICT['full'] #LEN_MORPH + 3 - 1 # 11 -1
 LEN_DIST = UNIT_QTY_DICT['dist'] #LEN_MORPH + 2 + 2
+LEN_COMP = UNIT_QTY_DICT['comp'] #LEN_DIST + 3
+LEN_COMP_BOTH = UNIT_QTY_DICT['comp_both'] #LEN_DIST + 3
 
 
 # Object to handle generic information about the data to process
@@ -79,6 +89,10 @@ class DataHandler:
         Training dictionary for the search space
     punctuation : boolean
         Boolean parameter to indicate if punctuation marks have to be predicted
+    without_translation : boolean
+        Boolean parameter to prevent the use of translation in the search space
+    stop_word_set : set
+        Set of custom stop words to remove from the translation
 
     Attributes
     ----------
@@ -92,7 +106,8 @@ class DataHandler:
         Boolean parameter to indicate the output format with five output labels
     '''
     def __init__(self, wapiti_file, raw_translation_file, data_type='train',
-                 pos=False, label_type=None, train_dict=None, punctuation=False):
+                 pos=False, label_type=None, train_dict=None, punctuation=False,
+                 without_translation=False, stop_word_set=None):
         self.wapiti_file = wapiti_file
         self.raw_translation_file = raw_translation_file
         self.data_type = data_type
@@ -100,6 +115,8 @@ class DataHandler:
         self.label_type = label_type
         self.train_dict = train_dict
         self.punctuation = punctuation
+        self.without_translation = without_translation
+        self.stop_word_set = stop_word_set
 
         # Label format
         self.both = self.label_type.both #bool(self.label_type == 'both')
@@ -107,9 +124,11 @@ class DataHandler:
 
         self.split_text = re.split('\n\n', wapiti_file)
         # Process the raw translation file
-        self.translation = sp.tokenise_file(self.raw_translation_file)
+        self.translation = sp.tokenise_file(self.raw_translation_file,
+                                            self.label_type.language)
         # self.translation: this version of the text is used during the alignment.
-        self.split_translation = [' '.join(sp.lemmatise_sentence(sentence)[1])
+        self.split_translation = [' '.join(sp.lemmatise_sentence(sentence,
+                                                    self.label_type.language)[1])
                     for sentence in utils.text_to_line(self.translation)] #_file)]
         n = len(self.split_text)
         utils.check_equality(n, len(self.split_translation))
@@ -180,6 +199,10 @@ class DataHandler:
             self.generate_search_space_function = generate_search_space_sentence_full
         elif self.label_type.both: # Both output labels
             self.generate_search_space_function = generate_search_space_sentence_both
+        elif self.label_type.comp_both: # Comp output labels
+            self.generate_search_space_function = generate_search_space_sentence_comp_both
+        elif self.label_type.comp: # Comp output labels
+            self.generate_search_space_function = generate_search_space_sentence_comp
         elif self.label_type.dist: # Dist output labels
             self.generate_search_space_function = generate_search_space_sentence_dist
         else:
@@ -210,7 +233,7 @@ class DataHandler:
             sentence, translation = self.split_text[i], self.split_translation[i]
             search_space_list.append(generate_search_space_sentence(sentence,
                         translation, all_gram_labels_set, test, self.train_dict,
-                        self.punctuation))
+                        self.punctuation, self.without_translation))
         search_space_list.append('')
         return '\nEOS\n'.join(search_space_list)
 
@@ -288,7 +311,8 @@ class DataHandler:
             sentence, raw_translation = self.split_text[i], split_raw_translation[i]
             search_space_list.append(self.generate_search_space_function(sentence,
                 raw_translation, all_gram_labels_set, pos_tag_set,
-                self.label_type, test, self.train_dict, self.punctuation))
+                self.label_type, test, self.train_dict, self.punctuation,
+                self.without_translation, self.stop_word_set))
         return search_space_list
 
     def generate_search_space_file_both(self, all_gram_labels_set=None,
@@ -365,6 +389,23 @@ def reference_label(unit_list, label_type):
 
     #return f'{"|".join(unit_list)}\t{"|".join(output_label)}'
     return f'{"|".join(input_label)}\t{"|".join(output_label)}'
+
+def reference_both_labels(unit_list, label_type):
+    '''Convert a Wapiti unit into a comp_both Lost reference unit.
+
+    There will be TWO possible references for a sentence.'''
+    if len(unit_list) != label_type.unit_length:
+        print(unit_list, f'different length than {label_type.unit_length}')
+    utils.check_equality(len(unit_list), label_type.unit_length)
+
+    input_label = unit_list[:label_type.label_position]
+    #output_label = unit_list[(label_type.label_position):]
+    ref_output_label = unit_list[(label_type.label_position):-1]
+    align_output_label = unit_list[-1] + unit_list[(label_type.label_position + 1):]
+
+    #return f'{"|".join(unit_list)}\t{"|".join(output_label)}'
+    return [f'{"|".join(input_label)}\t{"|".join(ref_output_label)}',
+            f'{"|".join(input_label)}\t{"|".join(align_output_label)}']
 
 
 class SentenceHandler:
@@ -445,7 +486,8 @@ class SentenceHandler:
             #if pos: # With PoS tag and gram_lex label
             #utils.check_equality(len(split_unit), LEN_THREE_OUTPUTS) #6) #7)
             assert len(split_unit) in \
-            [LEN_THREE_OUTPUTS, LEN_MORPH, LEN_FULL, LEN_FIVE_OUTPUTS, LEN_DIST], \
+            [LEN_THREE_OUTPUTS, LEN_MORPH, LEN_FULL, LEN_FIVE_OUTPUTS,
+            LEN_DIST, LEN_COMP], \
                    f'There are {len(split_unit)} units'
             utils.check_equality(len(split_unit), self.label_type.unit_length)
             '''
@@ -493,7 +535,7 @@ class SentenceHandler:
         return reference_list'''
 
     def labels_from_training_pos(self, dictionary, mode='pos', #both=False, full=False,
-                                 punctuation=False): #label_type=None):
+                                 punctuation=False, copy_index_list=[]): #label_type=None):
         '''Get some more possible labels based on the training dictionary.
 
         Modes:
@@ -502,6 +544,7 @@ class SentenceHandler:
         - both: using both labels, five outputs
         In the both case, the label order is different:
             In the train dictionary, morpheme: (aligned, frequency, pos, reference).
+        copy_index_list: list of all copied units
         '''
         label_list = []
         output_list = []
@@ -515,6 +558,7 @@ class SentenceHandler:
                 elif label_tuple[0].isupper(): # If grammatical label
                     continue
                 else:
+                    main_label = label_tuple[0]
                     if self.label_type.full: #mode == 'full': # Full labels
                         if len(label_tuple) == 3: # MORPH dictionary
                             main_label = label_tuple[0]
@@ -531,8 +575,17 @@ class SentenceHandler:
                         #               ] # TEST
                         #output_list = [label_tuple[0], 'lex', label_tuple[2],
                         #               '-1', 'D'] # '-1'
+                    elif self.label_type.comp:
+                        copy_trg = copy_in_sentence(main_label, self.source_list())
+                        # if (copy_trg == '1') and copy_index_list:
+                        #     copy_trg = morph_in_copy_indices_list(main_label,
+                        #                                         copy_index_list)
+                        #     copy_index_list[(copy_trg - 1)] = ('#DONE#', 0)
+                        position_trg = '-1' # No target index from dictionary
+                        output_list = [main_label, 'lex', label_tuple[2],
+                                    str(copy_trg), position_trg] #, 'D']
                     elif self.label_type.dist: # Copy and position labels
-                        main_label = label_tuple[0]
+                        #main_label = label_tuple[0]
                         copy_trg = copy_in_sentence(main_label, self.source_list())
                         position_trg = '-1' # No target index from dictionary
                         output_list = [main_label, 'lex', label_tuple[2],
@@ -574,28 +627,35 @@ def unknown_complex_lex_output(translation_list, pos_tag_set): ## TO DELETE? unu
     Former function for the search space.'''
     output_set = {f'{word}|lex|{pos_tag}' for word in translation_list
                   for pos_tag in pos_tag_set}
-    print(output_set)
+    print('unknown_complex_lex_output', output_set)
     return output_set
 
-def complex_lex_output(raw_translation, pos_tag_set, mode='pos',
-                       capitalise=False, source_list=[]): #translation_list
+def complex_lex_output(raw_translation, pos_tag_set, label_type, #mode='pos',
+                       capitalise=False, source_list=[], stop_word_set=None,
+                       copy_index_list=[]): #translation_list
     '''Convert a raw translation sentence into a set of complex output labels.
 
+    label_type: LabelHandler object
     Several modes of output labels:
     - pos: basic complex output: aligned gloss|binary category|PoS tag
     - both: with the translated words: aligned gloss|binary|PoS tag|aligned gloss
     - full: with full labels:
             aligned gloss|binary|PoS tag|translation index|relative difference
+    pos_tag_sent parameter obsolete
     '''
-    label_type = LabelHandler(mode)
+    #label_type = LabelHandler(mode)
+    trg_lang = label_type.language # Translation language
     capitalise = True
     #'''Convert a list of translation words into a set of complex output labels.'''
-    pos_list = sp.sentence_pos_tag(raw_translation)[1]
+    pos_list = sp.sentence_pos_tag(raw_translation, trg_lang)[1]
     #print(raw_translation, pos_list)
-    lemmatised_sentence = sp.lemmatise_sentence(raw_translation)[1]
+    lemmatised_sentence = sp.lemmatise_sentence(raw_translation, trg_lang)[1]
     lemma_translation_list = lemmatised_sentence #utils.line_to_word(lemmatised_sentence)
     n = len(lemma_translation_list)
     utils.check_equality(n, len(pos_list))
+    # Lemma AND PoS
+    lemmatised_a_sentence = sp.lemmatise_sentence_for_alignment(raw_translation, trg_lang)[1]
+    #print(raw_translation, lemmatised_a_sentence)
     #output_set = {f'{word}|lex|{pos_tag}' for word in translation_list for pos_tag in pos_tag_set}
     def duplicate_with_cap(lemma_list, pos_tag_list, n):
         '''Create a set with the same elements but with a capital letter.'''
@@ -607,7 +667,11 @@ def complex_lex_output(raw_translation, pos_tag_set, mode='pos',
     output_list = []
     for i in range(n):
         translation_lemma = lemma_translation_list[i]
+        if stop_word_set and (translation_lemma in stop_word_set):
+            continue
         pos_tag = pos_list[i][1]
+        utils.check_equality(lemmatised_a_sentence[i][0], translation_lemma)
+        utils.check_equality(lemmatised_a_sentence[i][1], pos_tag)
         if capitalise and (pos_list[i][1] == 'PROPN'): # Capitalise proper nouns
             translation_lemma = translation_lemma.capitalize() #title()
         label_list = [translation_lemma, 'lex', pos_tag]
@@ -626,16 +690,31 @@ def complex_lex_output(raw_translation, pos_tag_set, mode='pos',
         elif label_type.dist:
             #if translation_lemma.capitalize() == 'Stockholm':
             #    print(source_list, translation_lemma)
-            label_list.append(copy_in_sentence(translation_lemma, source_list))
+            copy_trg = copy_in_sentence(translation_lemma, source_list)
+            # if label_type.comp and (copy_trg == '1'): # and copy_index_list:
+            #     copy_trg = 1
+                # Cancel copy update
+                # copy_trg = morph_in_copy_indices_list(translation_lemma,
+                #                                     copy_index_list)
+                # print('dist: copy_trg', copy_trg, translation_lemma)
+                # if copy_trg >= 0:
+                #     copy_index_list[(copy_trg - 1)] = ('#DONE#', 0)
+                # else: # copy_trg = -1
+                #     pass
+            # else: # label_type.dist
+            #     copy_trg = 0
+            label_list.append(str(copy_trg))
             relative_trg_pos = i / n
             label_list.append(cap_position_in_sentence(relative_trg_pos)) # position_trg
             count_in_trg = min(lemmatised_sentence.count(translation_lemma), 1)
-            #label_list.append(f'T{count_in_trg}')
+            #if label_type.comp: # Add origin in the output
+            #    label_list.append('T') #f'T{count_in_trg}')
             output_list.append(('|'.join(label_list)))
-        elif mode == 'pos': # Base case
+        elif label_type.pos: #mode == 'pos': # Base case
             output_list.append(('|'.join(label_list)))
         else:
-            raise ValueError(f'Unknown output label mode: {mode}')
+            raise ValueError(f'Unknown output label mode: {label_type.label_type}')
+            #mode}')
 
     '''
     if mode == 'both':
@@ -683,7 +762,8 @@ def labels_from_training(fully_split_wapiti_sentence, dictionary, gold=False,
 
 # Generate a sentence for the search space file
 def generate_search_space_sentence(wapiti_sentence, translation, gram_labels_set,
-                                   test=False, train_dict=None, punctuation=False):
+                                   test=False, train_dict=None,
+                                   punctuation=False, without_translation=False):
     '''Convert a Wapiti format sentence for Lost for the search space file.
 
     With lexemes in the ouput. Extract only the words in the translation and the output.
@@ -728,7 +808,7 @@ def filter_lex_label(all_label_set):
 # Generate a sentence for the search space file with a more complex output
 def generate_search_space_sentence_pos(wapiti_sentence, raw_translation,
         gram_labels_set, pos_tag_set, label=None, test=False, train_dict=None,
-        punctuation=False):
+        punctuation=False, without_translation=False, stop_word_set=None):
     '''Convert a Wapiti format sentence for Lost for the search space file with a richer output label.
 
     The input translation LIST must contain the pos tag for each word
@@ -754,8 +834,11 @@ def generate_search_space_sentence_pos(wapiti_sentence, raw_translation,
     #print(output_gram_labels_set)
     # Lexical labels from the translation
     translation_label_set = complex_lex_output(raw_translation, pos_tag_set,
-                        source_list=source_morpheme_list)
-    possible_label_set = output_gram_labels_set.union(translation_label_set)
+                                        label, source_list=source_morpheme_list,
+                                        stop_word_set=stop_word_set)
+    possible_label_set = output_gram_labels_set
+    if not without_translation:
+        possible_label_set = output_gram_labels_set.union(translation_label_set)
 
     if test: # No output label possible
         # Add more
@@ -798,7 +881,7 @@ def generate_search_space_sentence_pos(wapiti_sentence, raw_translation,
 # Generate a sentence for the search space file with both labels in the output
 def generate_search_space_sentence_both(wapiti_sentence, raw_translation,
             gram_labels_set, pos_tag_set, label=None, test=False, train_dict=None,
-            punctuation=False):
+            punctuation=False, without_translation=False, stop_word_set=None):
     '''Convert a Wapiti format sentence for Lost for the search space file with a richer output label.
 
     The input translation LIST must contain the pos tag for each word
@@ -823,7 +906,7 @@ def generate_search_space_sentence_both(wapiti_sentence, raw_translation,
         #additional_inference_label_set = {}
         possible_label_set = output_gram_labels_set.union(
         #both_lex_output(raw_translation, pos_tag_set))
-                complex_lex_output(raw_translation, pos_tag_set, mode='both'))
+                complex_lex_output(raw_translation, pos_tag_set, label)) #mode='both'))
         possible_label_set = possible_label_set.union({'?|lex|?|?|-1'})
         #possible_label_set = possible_label_set.union(additional_inference_label_set)
 
@@ -834,7 +917,7 @@ def generate_search_space_sentence_both(wapiti_sentence, raw_translation,
     else: # Training: include output label for reachability -> not needed anymore?
         possible_label_set = output_gram_labels_set.union(
                             #both_lex_output(raw_translation, pos_tag_set),
-                complex_lex_output(raw_translation, pos_tag_set, mode='both'),
+                complex_lex_output(raw_translation, pos_tag_set, label), #mode='both'),
                 set(sentence.reference_pos_labels(mode='both')))
                 #unknown_complex_lex_output(filter_lex_label(
                 #[line[LEN_THREE_OUTPUTS - 3] for line in split_sentence]), pos_tag_set)) # line[3]
@@ -848,7 +931,8 @@ def generate_search_space_sentence_both(wapiti_sentence, raw_translation,
 # Generate a sentence for the search space file with full output labels
 def generate_search_space_sentence_full(wapiti_sentence, raw_translation,
                     gram_labels_set, pos_tag_set, label=None, test=False,
-                    train_dict=None, punctuation=False):
+                    train_dict=None, punctuation=False,
+                    without_translation=False, stop_word_set=None):
     '''Convert a Wapiti format sentence for Lost for the search space file with a full output label.
 
     The input translation LIST must contain the pos tag for each word
@@ -875,8 +959,10 @@ def generate_search_space_sentence_full(wapiti_sentence, raw_translation,
     #print(output_gram_labels_set)
     # Lexical labels from the translation
     translation_label_set = complex_lex_output(raw_translation, pos_tag_set,
-                                               mode='full')
-    possible_label_set = output_gram_labels_set.union(translation_label_set)
+                                               label, stop_word_set=stop_word_set) #mode='full')
+    possible_label_set = output_gram_labels_set
+    if not without_translation:
+        possible_label_set = output_gram_labels_set.union(translation_label_set)
     if test: # No output label possible
         # Add more
         #additional_inference_label_set = {'and|lex|CCONJ', 'be|lex|AUX',
@@ -933,7 +1019,8 @@ def filter_full_labels(translation_label_set, ref_dict_label_set, mode='full'):
                                   for unit in translation_label_set}
     for label in ref_dict_label_set:
         split_label = re.split('[|]', label)
-        if len(split_label) != label_handler.output_length: print(split_label)
+        if len(split_label) != label_handler.output_length: 
+            print('filter_full_labels', split_label)
         utils.check_equality(len(split_label), label_handler.output_length) # 7
         # If already in the translation
         if (split_label[0], split_label[2]) in main_translation_label_set:
@@ -947,7 +1034,8 @@ def filter_full_labels(translation_label_set, ref_dict_label_set, mode='full'):
 # Generate a sentence for the search space file with full output labels
 def generate_search_space_sentence_dist(wapiti_sentence, raw_translation,
                     gram_labels_set, pos_tag_set, label=None, test=False,
-                    train_dict=None, punctuation=False):
+                    train_dict=None, punctuation=False,
+                    without_translation=False, stop_word_set=None):
     '''Convert a Wapiti format sentence for Lost for the search space file with a dist output label.
 
     The input translation LIST must contain the pos tag for each word
@@ -974,8 +1062,12 @@ def generate_search_space_sentence_dist(wapiti_sentence, raw_translation,
     #print(output_gram_labels_set)
     # Lexical labels from the translation
     translation_label_set = complex_lex_output(raw_translation, pos_tag_set,
-                                mode='dist', source_list=source_morpheme_list)
-    possible_label_set = output_gram_labels_set.union(translation_label_set)
+                                label, #mode='dist',
+                                source_list=source_morpheme_list,
+                                stop_word_set=stop_word_set)
+    possible_label_set = output_gram_labels_set
+    if not without_translation:
+        possible_label_set = output_gram_labels_set.union(translation_label_set)
     if test: # No output label possible
         # Add more
         #possible_label_set = possible_label_set.union({'?|lex|?|-1|-1'})
@@ -990,6 +1082,173 @@ def generate_search_space_sentence_dist(wapiti_sentence, raw_translation,
             possible_label_set = possible_label_set.union(filtered_dict_label_set)
     else: # Training: include output label for reachability -> not needed anymore?
         reference_label_set = set(sentence.reference_pos_labels(mode='dist'))
+        #filtered_ref_label_set = filter_full_labels(
+        #                            translation_label_set, reference_label_set)
+        possible_label_set = possible_label_set.union(reference_label_set)
+
+    # Generate the search space labels
+    search_space_list = sentence.search_space_labels(possible_label_set)
+    return '\n'.join(search_space_list)
+
+def copy_indices(wapiti_sentence, label):
+    '''Keep track of copy indices (for dist, comp).
+
+    Format: [(morpheme, copy_index)]'''
+    sentence = SentenceHandler(wapiti_sentence, label)
+    copy_index_list = []
+    check_index = 1
+    for unit_list in sentence.fully_split_sentence:
+        copy_index = int(unit_list[5]) # Source copy index (copy_src)
+        if copy_index > 0:
+            copy_index_list.append((unit_list[0], copy_index))
+            print('copy_indices unit list', check_index, unit_list)
+            utils.check_equality(check_index, copy_index)
+            check_index += 1
+    return copy_index_list
+
+def morph_in_copy_indices_list(morpheme, copy_indices_list):
+    '''Get the index of a morpheme in the copy indices list.'''
+    copied_morphemes = [unit[0].lower() for unit in copy_indices_list]
+    if morpheme.lower() in copied_morphemes:
+        return copied_morphemes.index(morpheme.lower())
+    else:
+        print('morph_in_copy_indices_list', copied_morphemes, morpheme)
+        return -1
+
+# Generate a sentence for the search space file with comp output labels
+def generate_search_space_sentence_comp(wapiti_sentence, raw_translation,
+                    gram_labels_set, pos_tag_set, label=None, test=False,
+                    train_dict=None, punctuation=False,
+                    without_translation=False, stop_word_set=None):
+    '''Convert a Wapiti format sentence for Lost for the search space file with a comp output label.
+
+    The input translation LIST must contain the pos tag for each word
+    With lexemes in the ouput. Extract only the words in the translation and the output.
+    If test is True, the output labels are not included in the search space.'''
+    sentence = SentenceHandler(wapiti_sentence, label)
+    split_sentence = sentence.fully_split_sentence
+
+    ## List of all possible labels for the sentence ##
+    # Grammatical labels
+    output_gram_labels_set = {f'{gram_label}|gram|GRAM_GLOSS|-1|-2'#|G'
+                              for gram_label in gram_labels_set}
+
+    copy_index_list = [] # copy_indices(wapiti_sentence, label) # Cancel copy update
+    if copy_index_list != []: print('before processing copy', copy_index_list)
+    # Punctuation
+    source_morpheme_list = sentence.source_list()
+    if punctuation:
+        for morph in source_morpheme_list:
+            if morph in PUNCTUATION_LIST:
+                copy_src_i = morph_in_copy_indices_list(morph, copy_index_list)
+                #output_gram_labels_set.add(f'{morph}|lex|?|1|-1')
+                copy_src_i = 0 # Cancel copy update
+                output_gram_labels_set.add(f'{morph}|lex|?|{copy_src_i + 1}|-1')
+                # if copy_src_i >= 0:
+                #     #print(copy_src_i, copy_index_list[copy_src_i])
+                #     copy_index_list[(copy_src_i - 1)] = ('#DONE#', 0)
+                ##output_gram_labels_set.add(f'{morph}|gram|PUNCT|-1|-2|G')
+        #output_punct_label = {f'{punct_label}|gram|PUNCT|-1|-2'
+        #                      for punct_label in PUNCTUATION_LIST}
+        #output_gram_labels_set.union(output_punct_label)
+    # Add numbers
+    numbers = True
+    if numbers:
+        for morph in source_morpheme_list:
+            if morph.isdigit():
+                copy_src_i = morph_in_copy_indices_list(morph, copy_index_list)
+                copy_src_i = 0 # Cancel copy update
+                output_gram_labels_set.add(f'{morph}|lex|?|{copy_src_i + 1}|-2')
+                # if copy_src_i >= 0:
+                #     print('comp_numbers', copy_src_i, copy_index_list[copy_src_i])
+                #     copy_index_list[(copy_src_i - 1)] = ('#DONE#', 0)
+    #print(output_gram_labels_set)
+
+    #if copy_index_list != []: print('after punct', copy_index_list)
+    # Lexical labels from the translation
+    translation_label_set = complex_lex_output(raw_translation, pos_tag_set,
+                                label, #mode='comp',
+                                source_list=source_morpheme_list,
+                                stop_word_set=stop_word_set,
+                                copy_index_list=copy_index_list)
+    if copy_index_list != []: print('after done', copy_index_list)
+    if test: print('TR COMP', translation_label_set)
+    possible_label_set = output_gram_labels_set
+    if not without_translation:
+        possible_label_set = output_gram_labels_set.union(translation_label_set)
+    if test: # No output label possible
+        # Add more
+        #possible_label_set = possible_label_set.union({'?|lex|?|-1|-1'})
+
+        if train_dict: # There is a training dictionary
+            training_label = sentence.labels_from_training_pos(train_dict,
+                                            mode='comp',
+                                            punctuation=punctuation,
+                                            copy_index_list=copy_index_list)
+            filtered_dict_label_set = filter_full_labels(
+                        translation_label_set, set(training_label), mode='comp')
+            #possible_label_set = possible_label_set.union(set(training_label))
+            possible_label_set = possible_label_set.union(filtered_dict_label_set)
+    else: # Training: include output label for reachability -> not needed anymore?
+        reference_label_set = set(sentence.reference_pos_labels(mode='comp'))
+        #filtered_ref_label_set = filter_full_labels(
+        #                            translation_label_set, reference_label_set)
+        possible_label_set = possible_label_set.union(reference_label_set)
+
+    # Generate the search space labels
+    search_space_list = sentence.search_space_labels(possible_label_set)
+    return '\n'.join(search_space_list)
+
+# Generate a sentence for the search space file with comp_both output labels
+def generate_search_space_sentence_comp_both(wapiti_sentence, raw_translation,
+                    gram_labels_set, pos_tag_set, label=None, test=False,
+                    train_dict=None, punctuation=False, 
+                    without_translation=False, stop_word_set=None):
+    '''Convert a Wapiti format sentence for Lost for the search space file with a comp output label.
+
+    The input translation LIST must contain the pos tag for each word
+    With lexemes in the ouput. Extract only the words in the translation and the output.
+    If test is True, the output labels are not included in the search space.'''
+    sentence = SentenceHandler(wapiti_sentence, label)
+    split_sentence = sentence.fully_split_sentence
+
+    ## List of all possible labels for the sentence ##
+    # Grammatical labels
+    output_gram_labels_set = {f'{gram_label}|gram|GRAM_GLOSS|-1|-2'#|G'
+                              for gram_label in gram_labels_set}
+    # Punctuation
+    source_morpheme_list = sentence.source_list()
+    if punctuation:
+        for morph in source_morpheme_list:
+            if morph in PUNCTUATION_LIST:
+                #punctuation_list.append(morph])
+                output_gram_labels_set.add(f'{morph}|gram|PUNCT|1|-2')
+                #output_gram_labels_set.add(f'{morph}|gram|PUNCT|-1|-2|G')
+        #output_punct_label = {f'{punct_label}|gram|PUNCT|-1|-2'
+        #                      for punct_label in PUNCTUATION_LIST}
+        #output_gram_labels_set.union(output_punct_label)
+    #print(output_gram_labels_set)
+    # Lexical labels from the translation
+    translation_label_set = complex_lex_output(raw_translation, pos_tag_set,
+                                label, #mode='comp',
+                                source_list=source_morpheme_list,
+                                stop_word_set=stop_word_set)
+    if not without_translation:
+        possible_label_set = output_gram_labels_set.union(translation_label_set)
+    if test: # No output label possible
+        # Add more
+        #possible_label_set = possible_label_set.union({'?|lex|?|-1|-1'})
+
+        if train_dict: # There is a training dictionary
+            training_label = sentence.labels_from_training_pos(train_dict,
+                                            mode='comp',
+                                            punctuation=punctuation)
+            filtered_dict_label_set = filter_full_labels(
+                        translation_label_set, set(training_label), mode='comp')
+            #possible_label_set = possible_label_set.union(set(training_label))
+            possible_label_set = possible_label_set.union(filtered_dict_label_set)
+    else: # Training: include output label for reachability -> not needed anymore?
+        reference_label_set = set(sentence.reference_pos_labels(mode='comp'))
         #filtered_ref_label_set = filter_full_labels(
         #                            translation_label_set, reference_label_set)
         possible_label_set = possible_label_set.union(reference_label_set)
@@ -1024,7 +1283,8 @@ def split_text_list(text_list, train_size, test_size, dev_size=0):
     test_list = text_list[(n - test_size):]
     print(f'{len(train_list)} training and {len(test_list)} test sentences')
     # Development dataset
-    dev_list = text_list[train_size:(train_size + dev_size)]
+    #dev_list = text_list[train_size:(train_size + dev_size)]
+    dev_list = text_list[-(test_size + dev_size):-test_size]
     if dev_list != []:
         print(f'{len(dev_list)} developement sentences')
     return train_list, dev_list, test_list
@@ -1033,10 +1293,12 @@ def split_text_list(text_list, train_size, test_size, dev_size=0):
 #                        test_translation, save_path, exp_name, pos=False):
 def one_line_processing(wapiti_file, translation, train_size, test_size,
                         save_path, exp_name, pos=False, label_type='base',
-                        dev_size=0, train_dict=None, punctuation=False):
+                        dev_size=0, train_dict=None, punctuation=False,
+                        trg_language='en', without_translation=False,
+                        custom_stop_words=None):
     '''Temporary function to run the whole process (one output label)'''
     # Indicate the label format
-    label = LabelHandler(label_type) #LabelFormat(label_type)
+    label = LabelHandler(label_type, language=trg_language)
     label.print_setting()
     utils.check_equality(pos, label.pos) # Check -> to delete afterwards
 
@@ -1046,13 +1308,23 @@ def one_line_processing(wapiti_file, translation, train_size, test_size,
     train_translation, dev_translation, test_translation = split_file(
                                 translation, train_size, test_size, dev_size)
 
+    # Defined custom stop words to remove from the translation
+    if custom_stop_words: # Defined custom stop words to remove from the translation
+        stop_word_set = set(utils.text_to_line(custom_stop_words))
+    else:
+        stop_word_set = set()
+
     # Process the split texts
     train_data = DataHandler(train_wapiti, train_translation, data_type='train',
                              pos=pos, label_type=label, train_dict=train_dict,
-                             punctuation=punctuation)
+                             punctuation=punctuation,
+                             without_translation=without_translation,
+                             stop_word_set=stop_word_set)
     test_data = DataHandler(test_wapiti, test_translation, data_type='test',
                             pos=pos, label_type=label, train_dict=train_dict,
-                            punctuation=punctuation)
+                            punctuation=punctuation,
+                            without_translation=without_translation,
+                            stop_word_set=stop_word_set)
     if (dev_wapiti == '') and (dev_translation == ''):
         dev = False
         print('No development dataset')
@@ -1060,7 +1332,9 @@ def one_line_processing(wapiti_file, translation, train_size, test_size,
         dev = True
         dev_data = DataHandler(dev_wapiti, dev_translation, data_type='dev',
                         pos=pos, label_type=label, train_dict=train_dict,
-                        punctuation=punctuation)
+                        punctuation=punctuation,
+                        without_translation=without_translation,
+                        stop_word_set=stop_word_set)
         print(f'Development dataset of size: {len(dev_data.split_text)}')
     gapl_train = train_data.get_all_possible_labels()
     if label.pos: # Complex output
@@ -1123,12 +1397,19 @@ def main():
     elif args.label_type == 'dist':
         args.pos = True
         print('!!!!!!!!!DIST, TO DELETE .')
+    elif args.label_type == 'comp':
+        args.pos = True
+        print('!!! COMP')
+        if not args.train_dict: # No training dictionary specified
+            raise ValueError('A training dictionary must be specified')
     elif args.pos: # Complex output
         print('!!!!!!Output with three labels.')
 
     # Using punctuation
     if args.punctuation:
         print('Predicting punctuations')
+    if args.trg_language != 'en':
+        print(f'The target translation is in {args.trg_language}.')
 
     # Read the datasets
     wapiti_file = open(args.wapiti_filepath, 'r', encoding = 'utf8').read()
@@ -1144,12 +1425,22 @@ def main():
     else:
         train_dict = None
 
+    # Using a custom list of stop words
+    if args.custom_stop_words:
+        custom_stop_words = open(
+                        args.custom_stop_words, 'r', encoding = 'utf8').read()
+    else:
+        custom_stop_words = None
+
     # Process the files
     one_line_processing(wapiti_file, translation, args.train_size,
                         args.test_size, args.save_path, args.out_name,
                         pos=args.pos, label_type=args.label_type,
                         dev_size=args.dev_size, train_dict=train_dict,
-                        punctuation=args.punctuation)
+                        punctuation=args.punctuation,
+                        trg_language=args.trg_language,
+                        without_translation=args.without_translation,
+                        custom_stop_words=custom_stop_words)
 
 
 if __name__ == "__main__":
