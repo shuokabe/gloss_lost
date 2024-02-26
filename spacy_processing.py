@@ -78,7 +78,7 @@ def tokenise_sentence(raw_sentence, language='en', hyphen=True):
 
 def tokenise_file(raw_file, language='en', hyphen=True):
     '''Tokenise a text.'''
-    split_raw_file = utils.text_to_line(raw_file)
+    split_raw_file = utils.text_to_line(raw_file, empty=False)
     tokenised_list = []
     for line in split_raw_file:
         tokenised_list.append(
@@ -119,7 +119,7 @@ def lemmatise_sentence_for_alignment(raw_sentence, language='en', hyphen=True):
     for i in range(len(process_sent)):
         token = process_sent[i]
         if (token.lemma_ != token.lemma_.lower()) and (token.lemma_ != 'I'):
-            print(f'Lowered token: {token.lemma_}')
+            pass #print(f'Lowered token: {token.lemma_}')
         lemma = token.lemma_.lower().replace(' ', r'.')
         lemmatised_sentence.append((lemma, token.pos_, i))
     utils.check_equality(len(tokenised_sent), len(lemmatised_sentence))

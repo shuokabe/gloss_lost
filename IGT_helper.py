@@ -135,7 +135,7 @@ def create_dummy_alignment(lex_gloss, translation):
 def display_sentence_alignment(path, file_start, i, alignment):
     '''Display the sentence with its alignments (test = True).'''
     corpus = create_corpus(path, file_start, test=True)
-    split_alignment = utils.text_to_line(alignment)
+    split_alignment = utils.text_to_line(alignment, empty=False)
     sentence = corpus.sentence_list[i]
     #tw.Sentence(corpus.split_src[i], gloss, translation)
     return (sentence.reference_and_aligned_gloss_with_source(split_alignment[i]),

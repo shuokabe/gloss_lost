@@ -193,9 +193,9 @@ class Corpus:
         self.translation = translation
         self.test = test
 
-        self.split_source = utils.text_to_line(source)
-        self.split_gloss = utils.text_to_line(gloss)
-        self.split_translation = utils.text_to_line(translation)
+        self.split_source = utils.text_to_line(source, empty=False)
+        self.split_gloss = utils.text_to_line(gloss, empty=False)
+        self.split_translation = utils.text_to_line(translation, empty=False)
         self.n_sent = len(self.split_source)
         utils.check_equality(self.n_sent, len(self.split_translation))
         if test: self.split_gloss = [''] * self.n_sent # No test gloss
@@ -312,7 +312,8 @@ class Corpus:
         utils.check_equality(self.n_sent, len(split_align))
 
         aligned_lex_gloss_list = []
-        for i in range(self.n_sent):
+        for i in tqdm(range(self.n_sent)):
+        #for i in range(self.n_sent):
             #print(f'Processing sentence {i}')
             alignment_sent = split_align[i]
             sentence = self.sentence_list[i]
@@ -412,7 +413,7 @@ class Corpus:
         # Process the training part of the dataset
         print(f'Using a train dataset of {train_index} sentences.')
 
-        split_train = [utils.text_to_line(sentence)
+        split_train = [utils.text_to_line(sentence, empty=False)
                        for sentence in split_wapiti_file[:train_index]]
         train_dict = dict()
         # Constitute a dictionary from the training part
@@ -1162,6 +1163,9 @@ class Sentence:
                     if (alignment_index < alignment_n) and \
                         (index == split_alignment[alignment_index][0]):
                         translation_index = split_alignment[alignment_index][1]
+                        if translation_index >= len(split_translation): # print
+                            print(split_translation, '\n', translation_index, '\n', 
+                                  split_alignment, aligned_indices)
                         aligned_word_list.append(split_translation[translation_index])
                         alignment_index += 1
                     else: # No aligned lexical gloss: align it with an empty string

@@ -124,13 +124,15 @@ class DataHandler:
 
         self.split_text = re.split('\n\n', wapiti_file)
         # Process the raw translation file
+        print('Tokenising the translation file.')
         self.translation = sp.tokenise_file(self.raw_translation_file,
                                             self.label_type.language)
         # self.translation: this version of the text is used during the alignment.
+        n = len(self.split_text)
+        utils.check_equality(n, len(utils.text_to_line(self.translation, empty=False)))
         self.split_translation = [' '.join(sp.lemmatise_sentence(sentence,
                                                     self.label_type.language)[1])
-                    for sentence in utils.text_to_line(self.translation)] #_file)]
-        n = len(self.split_text)
+                    for sentence in utils.text_to_line(self.translation, empty=False)] #_file)]
         utils.check_equality(n, len(self.split_translation))
         print(f'Processing {n} {self.data_type} sentences.')
 
@@ -306,7 +308,7 @@ class DataHandler:
     def generate_search_space_list(self, all_gram_labels_set, pos_tag_set, test):
         '''Generate list of sentences for the search space file.'''
         search_space_list = []
-        split_raw_translation = utils.text_to_line(self.raw_translation_file)
+        split_raw_translation = utils.text_to_line(self.raw_translation_file, empty=False)
         for i in tqdm(range(len(self.split_text))): #range(n):
             sentence, raw_translation = self.split_text[i], split_raw_translation[i]
             search_space_list.append(self.generate_search_space_function(sentence,
